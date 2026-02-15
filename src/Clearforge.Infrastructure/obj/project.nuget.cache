@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s9ZYrWMihCE=",
+  "dgSpecHash": "DVgOXTQnm18=",
   "success": true,
   "projectFilePath": "/home/user/clear-forge/src/Clearforge.Infrastructure/Clearforge.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "/home/user/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.0-preview.5.24306.3/microsoft.entityframeworkcore.relational.9.0.0-preview.5.24306.3.nupkg.sha512",
     "/home/user/.nuget/packages/microsoft.entityframeworkcore.sqlite/9.0.0-preview.5.24306.3/microsoft.entityframeworkcore.sqlite.9.0.0-preview.5.24306.3.nupkg.sha512",
     "/home/user/.nuget/packages/microsoft.entityframeworkcore.sqlite.core/9.0.0-preview.5.24306.3/microsoft.entityframeworkcore.sqlite.core.9.0.0-preview.5.24306.3.nupkg.sha512",
+    "/home/user/.nuget/packages/microsoft.entityframeworkcore.tools/9.0.0-preview.5.24306.3/microsoft.entityframeworkcore.tools.9.0.0-preview.5.24306.3.nupkg.sha512",
     "/home/user/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.0-preview.5.24306.7/microsoft.extensions.caching.abstractions.9.0.0-preview.5.24306.7.nupkg.sha512",
     "/home/user/.nuget/packages/microsoft.extensions.caching.memory/9.0.0-preview.5.24306.7/microsoft.extensions.caching.memory.9.0.0-preview.5.24306.7.nupkg.sha512",
     "/home/user/.nuget/packages/microsoft.extensions.configuration/10.0.3/microsoft.extensions.configuration.10.0.3.nupkg.sha512",

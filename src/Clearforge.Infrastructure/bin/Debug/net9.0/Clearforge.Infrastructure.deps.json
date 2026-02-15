@@ -10,8 +10,10 @@
         "dependencies": {
           "Clearforge.Application": "1.0.0",
           "Clearforge.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.5.24306.3",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.5.24306.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0-preview.5.24306.3",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.0-preview.5.24306.3",
           "Microsoft.Extensions.Configuration.Json": "10.0.3"
         },
         "runtime": {
@@ -406,6 +408,11 @@
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.30603"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.5.24306.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.5.24306.3"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.5.24306.7": {
@@ -1060,6 +1067,13 @@
       "sha512": "sha512-GlYJl6UJf4cmzKHRTrTRtJzMQDxM2IuqAf1mTmsp8vzhBf0f2GKkqefK1FbSUq6G0BbR7AQq7DYQdwjNgL0xvA==",
       "path": "microsoft.entityframeworkcore.sqlite.core/9.0.0-preview.5.24306.3",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.9.0.0-preview.5.24306.3.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.5.24306.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-USWTjDRSsIsgswctJbL+x75Qmpu3Ik2ikrkMvyFOTFLKmj3LphGSBBh8E5Y3LUH/ideVeRbXSSlyKck22y3iKA==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.0-preview.5.24306.3",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.0-preview.5.24306.3.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.5.24306.7": {
       "type": "package",

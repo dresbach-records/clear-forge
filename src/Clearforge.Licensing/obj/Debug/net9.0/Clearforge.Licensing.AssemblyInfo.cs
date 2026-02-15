@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Clearforge.Licensing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcd8a5de74bfee71060cea1d2f99a5fd46b355ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c234a46ae7fde70aaee08611e4ce0e7b930aa8b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Clearforge.Licensing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Clearforge.Licensing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

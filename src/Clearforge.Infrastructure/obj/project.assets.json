@@ -492,6 +492,12 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.5.24306.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.5.24306.3"
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.5.24306.7": {
         "type": "package",
         "dependencies": {
@@ -2509,6 +2515,31 @@
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.5.24306.3": {
+      "sha512": "USWTjDRSsIsgswctJbL+x75Qmpu3Ik2ikrkMvyFOTFLKmj3LphGSBBh8E5Y3LUH/ideVeRbXSSlyKck22y3iKA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/9.0.0-preview.5.24306.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.tools.9.0.0-preview.5.24306.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net472/any/ef.exe",
+        "tools/net472/win-arm64/ef.exe",
+        "tools/net472/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0-preview.5.24306.7": {
       "sha512": "E3nefp5JlDv66jlkgJaMrEpwxTyp4OWqzz63eJb8By80YZvEx5zYSrPvXEusoHeElqjb3DoN2cJJimYQXlhPzg==",
       "type": "package",
@@ -3842,8 +3873,10 @@
     "net9.0": [
       "Clearforge.Application >= 1.0.0",
       "Clearforge.Domain >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 9.0.0-preview.5.24306.3",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0-preview.5.24306.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0-preview.5.24306.3",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.5.24306.3",
       "Microsoft.Extensions.Configuration.Json >= 10.0.3"
     ]
   },
@@ -3897,6 +3930,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[9.0.0-preview.5.24306.3, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -3904,6 +3941,12 @@
             "version": "[9.0.0-preview.5.24306.3, )"
           },
           "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[9.0.0-preview.5.24306.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.0-preview.5.24306.3, )"
           },
