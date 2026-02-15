@@ -15,13 +15,13 @@ Clearforge is designed to operate with clean architecture principles, scalable A
 
 ## Company
 
-Clearforge is developed and maintained by Tech Ops Engineering, under the corporate structure of:
+Clearforge is developed and maintained by Tech labs Engineering, under the corporate structure of:
 
 **Dresbach Group**
 Canada-based technology holding company
 
 **Founder & Lead Architect:**
-Marcos Vinicius Dresbach do Amaral
+Vini Amaral
 
 The Dresbach Group operates in software engineering, infrastructure systems, enterprise tools and technology solutions.
 
