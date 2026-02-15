@@ -1,3 +1,5 @@
+![Clearforge Banner](public/capa.png)
+
 # CLEARFORGE
 
 Enterprise Windows Optimization System
