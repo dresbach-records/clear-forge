@@ -1,0 +1,12 @@
+/home/user/clear-forge/src/Clearforge.Licensing/bin/Debug/net9.0/Clearforge.Licensing.deps.json
+/home/user/clear-forge/src/Clearforge.Licensing/bin/Debug/net9.0/Clearforge.Licensing.dll
+/home/user/clear-forge/src/Clearforge.Licensing/bin/Debug/net9.0/Clearforge.Licensing.pdb
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.AssemblyInfoInputs.cache
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.AssemblyInfo.cs
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.csproj.CoreCompileInputs.cache
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.sourcelink.json
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.dll
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/refint/Clearforge.Licensing.dll
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/Clearforge.Licensing.pdb
+/home/user/clear-forge/src/Clearforge.Licensing/obj/Debug/net9.0/ref/Clearforge.Licensing.dll

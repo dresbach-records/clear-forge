@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - Login Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark h-full flex flex-col font-display">
+<!-- Top decorative accent -->
+<div class="h-1.5 w-full bg-primary"></div>
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+<div class="w-full max-w-[420px]">
+<!-- Logo Area -->
+<div class="flex flex-col items-center mb-8">
+<div class="flex items-center gap-2 mb-2">
+<div class="bg-primary p-1.5 rounded-lg">
+<span class="material-icons text-white text-3xl">terminal</span>
+</div>
+<span class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Clear<span class="text-primary">Forge</span></span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Portal de Acesso Seguro</p>
+</div>
+<!-- Login Card -->
+<div class="bg-white dark:bg-slate-900 shadow-xl rounded-lg border border-slate-200 dark:border-slate-800 p-8">
+<form action="#" class="space-y-6">
+<!-- Email Field -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5" for="email">E-mail</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-slate-400 text-lg">mail_outline</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all sm:text-sm" id="email" name="email" placeholder="nome@exemplo.com.br" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="password">Senha</label>
+<a class="text-xs font-semibold text-primary hover:text-blue-700 dark:hover:text-blue-400 transition-colors" href="#">Esqueci minha senha</a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-slate-400 text-lg">lock_open</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-2.5 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all sm:text-sm" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" type="button">
+<span class="material-icons text-lg">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Remember me checkbox -->
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary focus:ring-primary border-slate-300 dark:border-slate-700 rounded cursor-pointer" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-slate-600 dark:text-slate-400 cursor-pointer" for="remember-me">Manter conectado</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all active:scale-[0.98]" type="submit">
+                        ENTRAR
+                    </button>
+</form>
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-sm text-slate-500 dark:text-slate-400">
+                        Não possui uma conta? 
+                        <a class="font-bold text-primary hover:underline transition-all" href="#">Criar Conta</a>
+</p>
+</div>
+</div>
+<!-- Additional Links/Info -->
+<div class="mt-8 flex justify-center gap-6">
+<a class="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 flex items-center gap-1" href="#">
+<span class="material-icons text-xs">help_outline</span> Suporte
+                </a>
+<a class="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 flex items-center gap-1" href="#">
+<span class="material-icons text-xs">privacy_tip</span> Privacidade
+                </a>
+<a class="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 flex items-center gap-1" href="#">
+<span class="material-icons text-xs">g_translate</span> Idioma
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="py-6 text-center">
+<p class="text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500 font-medium">
+            © 2024 CLEARFORGE System Optimization • v2.4.0
+        </p>
+</footer>
+</body></html>

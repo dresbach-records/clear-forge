@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Security Audit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "success": "#10b981",
+                "warning": "#f43f5e",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .audit-section-title { @apply text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">shield</span>
+                Segurança Avançada
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">build</span>
+                Ferramentas
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">bar_chart</span>
+                Relatórios
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<nav class="flex items-center gap-2 text-sm">
+<span class="text-slate-400">Advanced Mode</span>
+<span class="material-icons text-xs text-slate-300">chevron_right</span>
+<span class="font-bold text-slate-900 dark:text-white">Auditoria de Segurança do Sistema</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded text-xs font-mono text-slate-500">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    SISTEMA PROTEGIDO
+                </div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="Admin" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkVxg_hMx6mRP_39tdff2XNwGbKd6z3Vu0O1_gfJjC3_V1GKv9igjJ_pM2WGJul0KEFrcd1kbRBqdesFJbaeG2D5lBSMFZLs2IqLJe9etKDD1IbBwi0phUZ2gtK8a7UdAMfAtq1v3C1-Dkf1gjHD5KYWFE5ZRnhqls4ZTCgSEcJJmYhP82rOPa0nTbsqWB9IkqK3DNvnsskv752LaVFeOaeUmdV4wbn0scspFe0oy11jLH0yvHHj_vY5c7IK-am0pZkCS9M6eXB3Y"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 flex gap-8">
+<div class="flex-1 space-y-8 max-w-4xl">
+<section>
+<h3 class="audit-section-title">
+<span class="material-symbols-outlined text-sm">terminal</span>
+                        Configurações do Windows
+                    </h3>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-success">check_circle</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Windows Firewall</h4>
+<p class="text-xs text-slate-500">Ativo e monitorando conexões de entrada/saída.</p>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-400 px-3 py-1 bg-slate-50 dark:bg-slate-800 rounded">OTIMIZADO</span>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-warning">warning</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Controle de Conta de Usuário (UAC)</h4>
+<p class="text-xs text-slate-500">Nível de notificação abaixo do recomendado para segurança máxima.</p>
+</div>
+</div>
+<button class="text-xs font-bold text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg transition-all shadow-sm">CORRIGIR AGORA</button>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-success">check_circle</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Windows Defender Status</h4>
+<p class="text-xs text-slate-500">Proteção em tempo real e definições de vírus atualizadas.</p>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-400 px-3 py-1 bg-slate-50 dark:bg-slate-800 rounded">OTIMIZADO</span>
+</div>
+</div>
+</section>
+<section>
+<h3 class="audit-section-title">
+<span class="material-symbols-outlined text-sm">lock_person</span>
+                        Privacidade de Conta
+                    </h3>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-success">check_circle</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Telemetria de Identidade</h4>
+<p class="text-xs text-slate-500">Compartilhamento de dados de uso com terceiros desativado.</p>
+</div>
+</div>
+<span class="text-xs font-bold text-slate-400 px-3 py-1 bg-slate-50 dark:bg-slate-800 rounded">PROTEGIDO</span>
+</div>
+</div>
+</section>
+<section>
+<h3 class="audit-section-title">
+<span class="material-symbols-outlined text-sm">router</span>
+                        Portas Abertas &amp; Rede
+                    </h3>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-warning">warning</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Porta 3389 (RDP) Detectada</h4>
+<p class="text-xs text-slate-500">Acesso remoto via RDP está habilitado e vulnerável a ataques de força bruta.</p>
+</div>
+</div>
+<button class="text-xs font-bold text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg transition-all shadow-sm">FECHAR PORTA</button>
+</div>
+</div>
+</section>
+<section>
+<h3 class="audit-section-title">
+<span class="material-symbols-outlined text-sm">admin_panel_settings</span>
+                        Apps com Permissões Elevadas
+                    </h3>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-4">
+<span class="material-icons text-warning">warning</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Desconhecido.exe (PID 4092)</h4>
+<p class="text-xs text-slate-500">Executando com privilégios de Administrador sem assinatura digital válida.</p>
+</div>
+</div>
+<button class="text-xs font-bold text-white bg-warning hover:bg-warning/90 px-4 py-2 rounded-lg transition-all shadow-sm">REVOGAR</button>
+</div>
+</div>
+</section>
+</div>
+<aside class="w-80 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg p-6 shadow-sm flex flex-col items-center">
+<h3 class="font-bold text-slate-400 text-xs uppercase tracking-widest mb-6">Security Score</h3>
+<div class="relative flex items-center justify-center mb-6">
+<svg class="w-32 h-32 transform -rotate-90">
+<circle class="text-slate-100 dark:text-slate-800" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-dasharray="351.85" stroke-dashoffset="87.96" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">75</span>
+<span class="text-[10px] font-bold text-slate-400">/ 100</span>
+</div>
+</div>
+<p class="text-center text-sm text-slate-500 mb-6 px-2">Seu sistema apresenta riscos moderados que podem comprometer a integridade dos dados.</p>
+<button class="w-full bg-slate-900 dark:bg-white dark:text-slate-900 text-white font-bold py-3 rounded-lg text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        FIX ALL ISSUES
+                    </button>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-sm">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
+<h4 class="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase">Resumo da Auditoria</h4>
+</div>
+<div class="p-4 space-y-4">
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500">Itens Verificados</span>
+<span class="font-mono font-bold text-slate-700 dark:text-slate-300">42</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500">Vulnerabilidades</span>
+<span class="font-mono font-bold text-warning">03</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500">Privacidade</span>
+<span class="font-mono font-bold text-success">OK</span>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800"></div>
+<p class="text-[10px] leading-relaxed text-slate-400 italic">Última verificação: Hoje às 14:32:10 (Kernel Audit Mode)</p>
+</div>
+</div>
+<div class="bg-slate-900 text-slate-300 p-5 rounded-lg font-mono text-[11px] shadow-xl">
+<div class="flex items-center gap-2 mb-3 border-b border-slate-800 pb-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-slate-500 uppercase">System Log</span>
+</div>
+<div class="space-y-2 opacity-80">
+<p>&gt; Checking firewall tables...</p>
+<p>&gt; Port scan initiated: 0-65535</p>
+<p class="text-emerald-500">&gt; Integrity check passed.</p>
+<p class="text-warning">&gt; Alert: RDP vulnerability detected.</p>
+<p>&gt; Awaiting user intervention...</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Agendamento de Limpeza Automática</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "premium-gold": "#fbbf24",
+                        "slate-panel": "#ffffff"
+                    },
+                    fontFamily: {
+                        "sans": ["Segoe UI", "Inter", "system-ui", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "8px",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            -webkit-font-smoothing: antialiased;
+            background-color: #f6f7f8;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .toggle-tab:checked + label {
+            background-color: #137fec;
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-slate-700 font-sans">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 border-r border-slate-200 bg-white flex flex-col shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl font-bold">bolt</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 uppercase">Clearforge</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/5 text-primary font-semibold border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-xl">schedule</span>
+<span class="text-sm">Limpeza Automática</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">build</span>
+<span class="text-sm font-medium">Ferramentas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">assessment</span>
+<span class="text-sm font-medium">Relatórios</span>
+</a>
+<div class="pt-6 pb-2 text-[10px] font-bold text-slate-400 uppercase px-3 tracking-widest">Configuração</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl text-slate-400">settings</span>
+<span class="text-sm font-medium">Preferências</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl text-slate-400">help_outline</span>
+<span class="text-sm font-medium">Suporte VIP</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100">
+<div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-icons text-sm">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Membro PRO</span>
+</div>
+<div class="text-[10px] text-slate-500 mb-2 font-medium">Acesso total a ferramentas avançadas.</div>
+<button class="w-full py-1.5 text-[10px] font-bold bg-white border border-slate-200 text-slate-700 rounded shadow-sm hover:bg-slate-50 uppercase">Conta</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden bg-background-light">
+<header class="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-3">
+<a class="text-slate-400 hover:text-slate-600 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</a>
+<h2 class="text-lg font-bold text-slate-800">Agendamento de Limpeza Automática</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-100 rounded text-emerald-600">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="text-[10px] font-bold uppercase tracking-wide">Status: Agendamento Ativo</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-xl text-slate-500">account_circle</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<div class="max-w-3xl mx-auto space-y-6">
+<div class="bg-white border border-slate-200 rounded shadow-sm overflow-hidden">
+<div class="p-6 border-b border-slate-100">
+<label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Frequência da Limpeza</label>
+<div class="flex p-1 bg-slate-100 rounded-lg w-full max-w-sm">
+<input checked="" class="hidden toggle-tab" id="daily" name="frequency" type="radio"/>
+<label class="flex-1 text-center py-2 text-xs font-bold rounded cursor-pointer transition-all text-slate-500" for="daily">Diário</label>
+<input class="hidden toggle-tab" id="weekly" name="frequency" type="radio"/>
+<label class="flex-1 text-center py-2 text-xs font-bold rounded cursor-pointer transition-all text-slate-500" for="weekly">Semanal</label>
+<input class="hidden toggle-tab" id="monthly" name="frequency" type="radio"/>
+<label class="flex-1 text-center py-2 text-xs font-bold rounded cursor-pointer transition-all text-slate-500" for="monthly">Mensal</label>
+</div>
+</div>
+<div class="p-6 border-b border-slate-100 bg-slate-50/30">
+<label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Horário e Dia</label>
+<div class="flex items-center gap-4">
+<div class="flex-1 relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">calendar_today</span>
+<select class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded text-sm focus:ring-primary focus:border-primary">
+<option>Toda Segunda-feira</option>
+<option>Toda Terça-feira</option>
+<option>Toda Quarta-feira</option>
+<option>Toda Quinta-feira</option>
+<option>Toda Sexta-feira</option>
+<option>Todo Sábado</option>
+<option>Todo Domingo</option>
+</select>
+</div>
+<div class="w-32 relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded text-sm focus:ring-primary focus:border-primary text-center" type="text" value="03:00"/>
+</div>
+</div>
+</div>
+<div class="p-6 border-b border-slate-100">
+<label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Itens Incluídos na Limpeza</label>
+<div class="grid grid-cols-2 gap-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Arquivos Temporários</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Cache do Navegador</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Lixeira do Sistema</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Arquivos de Log do Windows</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Miniaturas de Imagens</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 group-hover:text-slate-900">Downloads Antigos (30+ dias)</span>
+</label>
+</div>
+</div>
+<div class="p-6 bg-slate-50/50">
+<div class="flex items-center gap-2 mb-4">
+<label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Opções Avançadas PRO</label>
+<span class="bg-primary/10 text-primary text-[8px] px-1.5 py-0.5 rounded font-bold uppercase">Exclusivo</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">power_settings_new</span>
+<div>
+<p class="text-xs font-bold text-slate-700">Desligar computador após concluir</p>
+<p class="text-[10px] text-slate-400 leading-none mt-0.5">O sistema será encerrado automaticamente após a limpeza.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400">timer</span>
+<div>
+<p class="text-xs font-bold text-slate-700">Executar apenas quando ocioso</p>
+<p class="text-[10px] text-slate-400 leading-none mt-0.5">Aguardar até que o PC não esteja em uso pesado.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-slate-100 flex items-center justify-end gap-3">
+<button class="px-5 py-2.5 bg-white border border-slate-200 text-slate-600 text-xs font-bold rounded uppercase tracking-wider hover:bg-slate-50 transition-colors">
+                                Limpar Agora
+                            </button>
+<button class="px-8 py-2.5 bg-primary text-white text-xs font-bold rounded uppercase tracking-wider hover:bg-blue-600 transition-colors shadow-sm">
+                                Salvar Agendamento
+                            </button>
+</div>
+</div>
+<div class="p-4 bg-blue-50/50 border border-blue-100 rounded flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-0.5">info</span>
+<p class="text-[11px] text-slate-600 leading-relaxed italic">
+                            O agendamento automático é executado em segundo plano através do serviço do Clearforge. As configurações PRO garantem que a manutenção ocorra sem interromper seu fluxo de trabalho, otimizando o consumo de recursos do sistema.
+                        </p>
+</div>
+</div>
+</div>
+<footer class="h-10 bg-white border-t border-slate-200 flex items-center justify-between px-8 text-[10px] text-slate-400 uppercase font-bold tracking-widest shrink-0">
+<div class="flex gap-4">
+<span>CLEARFORGE PRO v4.2.0</span>
+<span class="text-slate-200">|</span>
+<span class="text-primary">LICENÇA CORPORATIVA ATIVA</span>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> ENGINE 10.4.2</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> SECURE SYNC</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

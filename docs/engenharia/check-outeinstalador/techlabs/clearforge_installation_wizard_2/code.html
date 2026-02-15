@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Segoe UI", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .feature-row:nth-child(even) {
+                background-color: rgba(248, 250, 252, 0.5);
+            }
+            .dark .feature-row:nth-child(even) {
+                background-color: rgba(30, 41, 59, 0.3);
+            }
+        }
+    </style>
+<title>CLEARFORGE Plan Comparison</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[800px] bg-white dark:bg-slate-900 shadow-2xl rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col h-auto">
+<div class="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xs">settings_suggest</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">CLEARFORGE - Comparativo de Planos</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-icons text-lg">minimize</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-icons text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="p-8 flex flex-col">
+<div class="text-center mb-8">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Escolha a Versão Ideal para Você</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Desbloqueie todo o potencial do seu sistema com o CLEARFORGE PRO.</p>
+</div>
+<div class="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden mb-8">
+<div class="grid grid-cols-12 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-700">
+<div class="col-span-6 p-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Recursos</div>
+<div class="col-span-3 p-4 text-center text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-200">CLEARFORGE Free</div>
+<div class="col-span-3 p-4 text-center text-xs font-bold uppercase tracking-wider text-primary">CLEARFORGE PRO</div>
+</div>
+<div class="feature-row grid grid-cols-12 border-b border-slate-100 dark:border-slate-800 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">cleaning_services</span>
+<span class="text-sm text-slate-700 dark:text-slate-300">Limpeza Básica</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+<div class="feature-row grid grid-cols-12 border-b border-slate-100 dark:border-slate-800 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">rocket_launch</span>
+<span class="text-sm text-slate-700 dark:text-slate-300">Otimização de Inicialização</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+<div class="feature-row grid grid-cols-12 border-b border-slate-100 dark:border-slate-800 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">shutter_speed</span>
+<span class="text-sm text-slate-700 dark:text-slate-300 font-semibold">Deep Clean Avançado</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-slate-300 dark:text-slate-700 text-xl">remove_circle_outline</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+<div class="feature-row grid grid-cols-12 border-b border-slate-100 dark:border-slate-800 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">shield_with_heart</span>
+<span class="text-sm text-slate-700 dark:text-slate-300 font-semibold">Escudo de Privacidade em Tempo Real</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-slate-300 dark:text-slate-700 text-xl">remove_circle_outline</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+<div class="feature-row grid grid-cols-12 border-b border-slate-100 dark:border-slate-800 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">update</span>
+<span class="text-sm text-slate-700 dark:text-slate-300 font-semibold">Atualizações Automáticas</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-slate-300 dark:text-slate-700 text-xl">remove_circle_outline</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+<div class="feature-row grid grid-cols-12 items-center">
+<div class="col-span-6 p-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 text-lg">support_agent</span>
+<span class="text-sm text-slate-700 dark:text-slate-300 font-semibold">Suporte Premium 24/7</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-slate-300 dark:text-slate-700 text-xl">remove_circle_outline</span>
+</div>
+<div class="col-span-3 p-4 text-center">
+<span class="material-icons text-emerald-500 text-xl">check_circle</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<div class="col-span-6"></div>
+<div class="col-span-3 flex flex-col items-center">
+<div class="mb-4 text-center">
+<p class="text-2xl font-bold text-slate-900 dark:text-white">Grátis</p>
+<p class="text-xs text-slate-400 uppercase tracking-tighter">Para uso básico</p>
+</div>
+<button class="w-full py-2.5 px-4 text-sm font-medium text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded transition-all">
+                    Continuar com Free
+                </button>
+</div>
+<div class="col-span-3 flex flex-col items-center">
+<div class="mb-4 text-center">
+<p class="text-2xl font-bold text-primary">R$ 49,90<span class="text-xs font-normal text-slate-400">/ano</span></p>
+<p class="text-xs text-primary font-bold uppercase tracking-tighter">Melhor Valor</p>
+</div>
+<button class="w-full py-2.5 px-4 text-sm font-bold text-white bg-primary hover:bg-blue-600 rounded shadow-lg shadow-primary/30 transition-all active:scale-95">
+                    Atualizar Agora
+                </button>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/30 px-6 py-4 flex justify-between items-center border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold">
+<span class="material-icons text-xs">verified_user</span>
+            Transação Segura SSL
+        </div>
+<div class="flex items-center gap-3">
+<button class="text-xs font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 underline">
+                Termos de Licença
+            </button>
+</div>
+</div>
+</div>
+<div class="fixed top-0 left-0 w-full h-full -z-10 opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
+</div>
+
+</body></html>

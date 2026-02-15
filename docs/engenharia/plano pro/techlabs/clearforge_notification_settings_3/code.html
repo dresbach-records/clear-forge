@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Otimizador de Rede</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Segoe UI", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .gauge-container {
+                @apply relative flex flex-col items-center justify-center bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-4 rounded-lg shadow-sm;
+            }
+            .pro-badge {
+                @apply bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded border border-primary/20;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden">
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-lg">bolt</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">ClearForge</span>
+</div>
+<nav class="flex-1 p-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">language</span>
+<span class="text-sm font-medium">Otimizador de Rede</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">security</span>
+<span class="text-sm font-medium">Segurança</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">notifications</span>
+<span class="text-sm font-medium">Notificações</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">settings</span>
+<span class="text-sm font-medium">Geral</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-primary/10 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider">Status: PRO Ativo</span>
+<span class="material-icons text-primary text-sm">verified</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400">Assinatura corporativa válida até 2025.</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<header class="h-16 flex items-center justify-between px-8 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+<div class="flex items-center gap-4">
+<h1 class="text-xl font-semibold text-slate-800 dark:text-white">Otimizador de Rede</h1>
+<span class="pro-badge">PRO EXCLUSIVE</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 rounded-full border border-green-500/20">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="text-xs font-bold text-green-600 uppercase">Conectado</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-6xl mx-auto space-y-8">
+<div class="grid grid-cols-3 gap-6">
+<div class="gauge-container">
+<span class="material-symbols-outlined text-primary text-3xl mb-1">wifi_tethering</span>
+<span class="text-2xl font-bold text-slate-800 dark:text-white">12 ms</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Latência (Ping)</span>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[15%]"></div>
+</div>
+</div>
+<div class="gauge-container">
+<span class="material-symbols-outlined text-green-500 text-3xl mb-1">download</span>
+<span class="text-2xl font-bold text-slate-800 dark:text-white">482.5 Mbps</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Download</span>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-green-500 h-full w-[85%]"></div>
+</div>
+</div>
+<div class="gauge-container">
+<span class="material-symbols-outlined text-blue-400 text-3xl mb-1">upload</span>
+<span class="text-2xl font-bold text-slate-800 dark:text-white">125.1 Mbps</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Upload</span>
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1 mt-4 rounded-full overflow-hidden">
+<div class="bg-blue-400 h-full w-[60%]"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">dns</span>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded text-slate-500">RECOMENDADO</span>
+</div>
+<h3 class="text-base font-bold text-slate-800 dark:text-white">Otimização de DNS</h3>
+<p class="text-sm text-slate-500 mt-2">Alterne para servidores DNS ultra-rápidos (Cloudflare ou Google) para diminuir a latência de navegação.</p>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="text-xs font-medium text-slate-400 italic">Atual: DNS do Provedor</div>
+<button class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded hover:bg-primary/90 transition-colors">Aplicar</button>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-orange-500 mb-4">
+<span class="material-icons">cleaning_services</span>
+</div>
+<h3 class="text-base font-bold text-slate-800 dark:text-white">Limpeza de Cache DNS</h3>
+<p class="text-sm text-slate-500 mt-2">Limpe o cache local do resolver DNS para resolver problemas de conexão e endereços obsoletos.</p>
+</div>
+<div class="mt-6">
+<button class="w-full px-4 py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-sm font-semibold rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Limpar Cache</button>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 mb-4">
+<span class="material-icons">priority_high</span>
+</div>
+<h3 class="text-base font-bold text-slate-800 dark:text-white">Priorização de Tráfego</h3>
+<p class="text-sm text-slate-500 mt-2 mb-6">Selecione um perfil para otimizar pacotes de rede para sua atividade atual.</p>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center gap-2 p-3 rounded border border-primary bg-primary/5 text-primary">
+<span class="material-icons text-xl">sports_esports</span>
+<span class="text-[10px] font-bold">GAMING</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-xl text-slate-400">live_tv</span>
+<span class="text-[10px] font-bold text-slate-500">STREAMING</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons text-xl text-slate-400">work</span>
+<span class="text-[10px] font-bold text-slate-500">WORK</span>
+</button>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 mb-4">
+<span class="material-icons">settings_input_component</span>
+</div>
+<h3 class="text-base font-bold text-slate-800 dark:text-white">Ajustes de Adaptador</h3>
+<p class="text-sm text-slate-500 mt-2 mb-6">Otimize as configurações TCP/IP, como TCP Window Size e MTU, para máxima eficiência.</p>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Otimização Automática</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Monitor de Conexões Ativas</h2>
+<span class="text-xs text-primary font-medium flex items-center gap-1 cursor-pointer">
+<span class="material-icons text-sm">refresh</span> Atualizar agora
+                    </span>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-lg overflow-hidden">
+<table class="w-full text-left text-sm">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 border-b border-slate-100 dark:border-slate-800">
+<th class="px-6 py-3 font-semibold uppercase tracking-wider text-[10px]">Aplicação</th>
+<th class="px-6 py-3 font-semibold uppercase tracking-wider text-[10px]">Protocolo</th>
+<th class="px-6 py-3 font-semibold uppercase tracking-wider text-[10px]">Upload</th>
+<th class="px-6 py-3 font-semibold uppercase tracking-wider text-[10px]">Download</th>
+<th class="px-6 py-3 font-semibold uppercase tracking-wider text-[10px]">Prioridade</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-sm text-slate-400">language</span>
+</div>
+<span class="font-medium">Microsoft Edge</span>
+</td>
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">TCP/HTTPS</td>
+<td class="px-6 py-4 text-slate-500">2.1 MB/s</td>
+<td class="px-6 py-4 text-slate-800 dark:text-slate-200 font-medium">18.4 MB/s</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-bold rounded">NORMAL</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center text-primary">
+<span class="material-icons text-sm">sports_esports</span>
+</div>
+<span class="font-medium">Counter-Strike 2</span>
+</td>
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">UDP</td>
+<td class="px-6 py-4 text-slate-500">450 KB/s</td>
+<td class="px-6 py-4 text-slate-800 dark:text-slate-200 font-medium">1.2 MB/s</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-[10px] font-bold rounded">MÁXIMA</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 flex items-center gap-3">
+<div class="w-6 h-6 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-sm text-slate-400">cloud_download</span>
+</div>
+<span class="font-medium">Windows Update</span>
+</td>
+<td class="px-6 py-4 text-slate-500 font-mono text-xs">TCP</td>
+<td class="px-6 py-4 text-slate-500">12 KB/s</td>
+<td class="px-6 py-4 text-slate-800 dark:text-slate-200 font-medium">42.5 MB/s</td>
+<td class="px-6 py-4">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-400 text-[10px] font-bold rounded">BAIXA</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div>
+</main>
+
+</body></html>

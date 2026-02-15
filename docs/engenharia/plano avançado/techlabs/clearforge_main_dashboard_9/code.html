@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Memory &amp; Cache Optimization</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0078D4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "accent-blue": "#0063cc",
+                    },
+                    fontFamily: {
+                        "display": ["Segoe UI", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "8px", "lg": "8px", "xl": "12px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Segoe UI', 'Inter', sans-serif; }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .custom-range::-webkit-slider-runnable-track {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+        }
+        .dark .custom-range::-webkit-slider-runnable-track {
+            background: #1e293b;
+        }
+        .custom-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #0078D4;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            margin-top: -4px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white shadow-sm">
+<span class="material-icons text-xl">settings_input_component</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                    Painel
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">auto_fix_high</span>
+                    Limpeza Inteligente
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-symbols-outlined text-lg">memory</span>
+                    Otimização de Memória
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">power_settings_new</span>
+                    Boot &amp; Inicialização
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">lock</span>
+                    Cofre de Arquivos
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">shield</span>
+                    Privacidade
+                </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                    Configurações
+                </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Modo Avançado</span>
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Otimização de Memória Virtual e Cache</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 rounded text-xs font-medium text-emerald-600 dark:text-emerald-400">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                        Sistema íntegro
+                    </div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSy3Z2RUG62woxeHQNRrZcT5iHbfw-NgGG7kOhLbCDB_MBMYYHcJITgFCEq9ohRr6m8MsfQoxctede98xzvf2ihZwsQudeJrFWrTDqsS0KGz9PDwSCxBMAGY62j7GWUOUr4Gg2jm6GKgEh3AvPIp6JekfIRJhQpoesLNB3tZZoSoXc8L_VKa-Wuz1cnWk7kABwaQ-lKrpWy2AQj0eXkVaqhe_FwfLpw3VowgMuC1kyGup0PmVsnliFX-TC_nKb5ZXD_p8So7mlk-A"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-4xl mx-auto space-y-6">
+<section class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm p-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">storage</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Arquivo de Paginação (Pagefile)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-100 dark:border-slate-800">
+<span class="text-xs font-semibold text-slate-500 uppercase">Tamanho Atual</span>
+<div class="text-2xl font-bold text-slate-900 dark:text-white">4096 MB</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-100 dark:border-slate-800">
+<span class="text-xs font-semibold text-slate-500 uppercase">Tamanho Recomendado</span>
+<div class="text-2xl font-bold text-primary">8192 MB</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3 p-3 rounded-lg border border-slate-100 dark:border-slate-800">
+<input checked="" class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary" type="checkbox"/>
+<div>
+<label class="text-sm font-bold text-slate-800 dark:text-slate-200">Gerenciar automaticamente o tamanho de todos os arquivos de paginação</label>
+<p class="text-xs text-slate-500">O Windows decidirá o melhor tamanho com base no uso.</p>
+</div>
+</div>
+<div class="p-4 rounded-lg border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/20">
+<label class="text-sm font-bold text-slate-800 dark:text-slate-200 mb-4 block">Tamanho Personalizado (MB)</label>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-xs text-slate-500 mb-1">Tamanho Inicial</label>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded py-2 px-3 text-sm focus:ring-primary focus:border-primary" placeholder="4096" type="number"/>
+</div>
+<div>
+<label class="block text-xs text-slate-500 mb-1">Tamanho Máximo</label>
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded py-2 px-3 text-sm focus:ring-primary focus:border-primary" placeholder="12288" type="number"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm p-6">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">cleaning_services</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Limpeza de Cache do Sistema</h2>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div>
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">Cache de Pré-busca (Prefetch)</h3>
+<p class="text-xs text-slate-500">Otimiza o lançamento de aplicativos.</p>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Limpar</button>
+</div>
+<div class="flex items-center justify-between p-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div>
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">Cache de Ícones</h3>
+<p class="text-xs text-slate-500">Corrige ícones corrompidos no desktop.</p>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Limpar</button>
+</div>
+<div class="flex items-center justify-between p-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div>
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">Cache de Miniaturas</h3>
+<p class="text-xs text-slate-500">Redesenha prévias de imagens e vídeos.</p>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Limpar</button>
+</div>
+<div class="flex items-center justify-between p-3 border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div>
+<h3 class="text-sm font-bold text-slate-800 dark:text-slate-200">Cache de Fontes</h3>
+<p class="text-xs text-slate-500">Resolve problemas de renderização de texto.</p>
+</div>
+<button class="px-4 py-1.5 text-xs font-bold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Limpar</button>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm p-6">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Monitor de Uso de Memória Virtual</h2>
+</div>
+<span class="text-xs font-bold text-slate-400">EM TEMPO REAL</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between text-sm mb-1">
+<span class="font-medium text-slate-600 dark:text-slate-400">Swap File Usage (Pagefile)</span>
+<span class="font-bold text-primary">24%</span>
+</div>
+<div class="w-full h-8 bg-slate-100 dark:bg-slate-800 rounded overflow-hidden relative border border-slate-200 dark:border-slate-700">
+<div class="h-full bg-primary/20 w-full absolute top-0 left-0"></div>
+<div class="h-full bg-primary shadow-[0_0_15px_rgba(0,120,212,0.4)] transition-all duration-500" style="width: 24%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase">
+<span>0 GB</span>
+<span>Total: 8.0 GB</span>
+</div>
+</div>
+<div class="mt-6 flex gap-4">
+<div class="flex-1 p-3 border border-slate-100 dark:border-slate-800 rounded flex flex-col items-center">
+<span class="text-[10px] font-bold text-slate-400 uppercase mb-1">Leitura de Disco</span>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">12.4 MB/s</span>
+</div>
+<div class="flex-1 p-3 border border-slate-100 dark:border-slate-800 rounded flex flex-col items-center">
+<span class="text-[10px] font-bold text-slate-400 uppercase mb-1">Escrita de Disco</span>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">3.8 MB/s</span>
+</div>
+<div class="flex-1 p-3 border border-slate-100 dark:border-slate-800 rounded flex flex-col items-center">
+<span class="text-[10px] font-bold text-slate-400 uppercase mb-1">Falhas de Página</span>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">142/s</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<footer class="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">info</span>
+<span class="font-medium">Otimizações de memória podem exigir reinicialização.</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-sm rounded transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+                        Limpar Todos os Caches
+                    </button>
+<button class="px-8 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold text-sm rounded shadow-lg shadow-primary/25 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">offline_bolt</span>
+                        Aplicar Otimizações
+                    </button>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

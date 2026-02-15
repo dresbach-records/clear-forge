@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Extension Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Segoe UI", "Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+          body { @apply bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 h-screen overflow-hidden; }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">build</span>
+                Ferramentas
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">bar_chart</span>
+                Relatórios
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<nav class="flex items-center gap-2 text-sm">
+<span class="text-slate-400">Ferramentas</span>
+<span class="material-icons text-xs text-slate-400">chevron_right</span>
+<span class="font-semibold text-slate-900 dark:text-white">Gerenciador de Extensões</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 rounded border border-emerald-100 dark:border-emerald-500/20 text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                    PRO ATIVO
+                </div>
+<div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="Admin" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD250OxWQWu2QfFKCSMtl1w9zS5cA6rr0kb-Sgw31_fTXKlJWll65r9U5l60KZalTzawl_CYNjoBtg39TxCSE9Yjd9vKt_Ee34mafhQvjNoHCWBq4R0D5cE915bermxhHgq0c3Ii6kTiT9hBrWWRy_EYNEVz492qadb7WbHUdTBJ_fKTXPF8Rjmq2RmMUUerd7tpo_Q4Uet_Xat-L5klbo07AYWj8kiZTy8al3cWVI7pEiuC_JUym59vohkFE5jXlQW2M8nFbjyac"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300 uppercase">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-6xl mx-auto space-y-6">
+<div class="flex flex-col gap-6">
+<div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Gerenciador de Extensões</h2>
+<p class="text-slate-500 dark:text-slate-400">Gerencie e analise riscos de segurança em seus navegadores instalados.</p>
+</div>
+<div class="flex border-b border-slate-200 dark:border-slate-800">
+<button class="px-6 py-3 border-b-2 border-primary text-primary font-semibold text-sm flex items-center gap-2">
+<img alt="Chrome" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqhQ5-afck5-fxOz4jaCSTzdqhrS6AhM79YVcH2GbYVmi_M9mnku7RINcIdAFLX816h5Gt3Zb2LUeAIOklMDHH-Fo2YH0L9YtWyDEKsIB7yndY6pnXm7_NJMXvNSny2ZNqUsYkXYfDIJqBcgqcIQowDjTNP8oofPUJdYuMCP2oqFk8xxqECbKYkgFO1dDBWyjbgBvN1qdqqXVddDcVBQIcICkLKbPAYhS5BjYMBRRMrEmpZoWo2vbNTUQuwUVof4CZPwvslAINy-U"/>
+                            Google Chrome
+                        </button>
+<button class="px-6 py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium text-sm flex items-center gap-2 transition-colors">
+<img alt="Edge" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxcg5zuOVvP7N0Pt6XFtJaQQnhfC60iDDOKf8XeVHhfAskshHbpCsHaYUVWPAvuO-8sGtkdncVmOTk9csSrlYHaAUQdpPr5dD3gBTQFQx_loCIXVukw2PCfYuQJ9eYIgvQgMKGfh-KIxJZEIOoSYuioi1Z2kmtkU0jC0x3zz5UQJyKUvCRwKDH97efKGu8sEpba6cOnWiwOA7iplLcX9e-H7HuoycN0Yf324hH7gf_ruM1mQsKLxRfisAPCc-W5kpRMwe4VVun1zw"/>
+                            Microsoft Edge
+                        </button>
+<button class="px-6 py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 font-medium text-sm flex items-center gap-2 transition-colors">
+<img alt="Firefox" class="w-4 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC92WpKXmMw39lvzNOqp17kF-nXpsRR7c3uHRENTdbfPLkg-mMS0VQ6JK5wGxfHwdIcmeMtBAqChZ_xgCNxvJNVdXNf3kxfModmjZfaX58LQuP_wgOV5M4yWT0scpLK8q-30cVGeDYysWrpW8RwfzVL64f9acVKnQqmrKbTzmK4UhNYSX46jcmtGE4PI5fAzxc1HZrGpyUZCfcK3WBJLCl0KSVCiZkYmAkPR18kZrtiy7f3mZsdw8_ybBqgR7X9zsWWFkfuPTqh6o"/>
+                            Mozilla Firefox
+                        </button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Extensão</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Permissões</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-center">Nível de Risco</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-primary">extension</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white">uBlock Origin</div>
+<div class="text-xs text-slate-500">v1.54.0 • Ativo</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Ler dados</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Modificar conteúdo</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
+                                        Baixo
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Desativar</button>
+<button class="px-3 py-1.5 text-xs font-semibold text-red-600 border border-red-100 dark:border-red-900/30 rounded hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">Remover</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-amber-500">warning</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white">Free VPN Proxy</div>
+<div class="text-xs text-slate-500">v4.2.1 • Ativo</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Histórico</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Rede</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Cookies</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                                        Médio
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Desativar</button>
+<button class="px-3 py-1.5 text-xs font-semibold text-red-600 border border-red-100 dark:border-red-900/30 rounded hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">Remover</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-red-500">gpp_maybe</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white">Dark Mode Theme Plus</div>
+<div class="text-xs text-slate-500">v0.1.2 • Ativo</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Acesso total a sites</span>
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Senhas</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400">
+                                        Alto
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold border border-slate-200 dark:border-slate-700 rounded hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Desativar</button>
+<button class="px-3 py-1.5 text-xs font-semibold text-red-600 border border-red-100 dark:border-red-900/30 rounded hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">Remover</button>
+</div>
+</td>
+</tr>
+<tr class="opacity-60 bg-slate-50/30 dark:bg-slate-900/30">
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-icons text-slate-400">extension_off</span>
+</div>
+<div>
+<div class="font-bold text-slate-900 dark:text-white">Grammar Checker</div>
+<div class="text-xs text-slate-500">v2.1.0 • Desativado</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-[10px] text-slate-600 dark:text-slate-400 rounded">Clipboard</span>
+</div>
+</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-500">
+                                        Baixo
+                                    </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold bg-primary text-white rounded hover:bg-primary/90 transition-colors">Ativar</button>
+<button class="px-3 py-1.5 text-xs font-semibold text-red-600 border border-red-100 dark:border-red-900/30 rounded hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">Remover</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center bg-primary/5 dark:bg-primary/10 p-6 rounded-lg border border-primary/10 dark:border-primary/20">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-icons">shield</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Proteção Automática de Navegador</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400">CLEARFORGE monitora novas instalações em tempo real.</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded transition-all shadow-md shadow-primary/20 flex items-center gap-2">
+<span class="material-icons text-sm">refresh</span>
+                        REESCANEAR AGORA
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

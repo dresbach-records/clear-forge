@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Clearforge.Api.props" />
+</Project>

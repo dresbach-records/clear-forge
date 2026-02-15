@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Gerenciador do Windows Update</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "danger": "#dc2626",
+                        "warning": "#f59e0b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Segoe UI", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display;
+            }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            @apply bg-transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex overflow-hidden">
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-lg">bolt</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">ClearForge</span>
+</div>
+<nav class="flex-1 p-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">settings_suggest</span>
+<span class="text-sm font-medium">Otimização Profunda</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">update</span>
+<span class="text-sm font-medium">Windows Update</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">security</span>
+<span class="text-sm font-medium">Segurança</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">history</span>
+<span class="text-sm font-medium">Histórico</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-primary/10 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider">Assinatura PRO</span>
+<span class="material-icons text-primary text-sm">verified</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400">Recursos avançados de atualização ativos.</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col h-screen">
+<header class="h-16 flex items-center justify-between px-8 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shrink-0">
+<h1 class="text-xl font-semibold text-slate-800 dark:text-white">Gerenciador do Windows Update</h1>
+<div class="flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-full">
+<span class="material-icons text-sm">workspace_premium</span>
+<span class="text-xs font-bold uppercase tracking-wider">Plano: PRO</span>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto custom-scrollbar bg-[#f9fafb] dark:bg-background-dark p-8 space-y-8">
+<section>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-green-50 dark:bg-green-900/20 text-green-600 rounded-lg">
+<span class="material-icons">check_circle</span>
+</div>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Status do Sistema</h3>
+</div>
+<p class="text-2xl font-bold text-slate-800 dark:text-white">Atualizado</p>
+<p class="text-xs text-slate-500 mt-1">Última verificação: Hoje, 09:42</p>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 rounded-lg">
+<span class="material-icons">downloading</span>
+</div>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Updates Pendentes</h3>
+</div>
+<p class="text-2xl font-bold text-slate-800 dark:text-white">0</p>
+<p class="text-xs text-slate-500 mt-1">Nenhuma atualização crítica encontrada</p>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="p-2 bg-amber-50 dark:bg-amber-900/20 text-amber-600 rounded-lg">
+<span class="material-icons">storage</span>
+</div>
+<h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Lixo de Instalação</h3>
+</div>
+<p class="text-2xl font-bold text-slate-800 dark:text-white">4.2 GB</p>
+<p class="text-xs text-slate-500 mt-1">Arquivos antigos ocupando espaço</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10">
+<button class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:border-primary transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 group-hover:text-primary transition-colors">pause_circle</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Pausar Atualizações por 7 dias</span>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:border-primary transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 group-hover:text-primary transition-colors">event_repeat</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Agendar Reinicialização</span>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg hover:border-primary transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 group-hover:text-primary transition-colors">cleaning_services</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Limpar Arquivos de Instalação</span>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</button>
+</div>
+</section>
+<section class="max-w-5xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Atualizações Instaladas Recentemente</h2>
+<span class="text-[11px] text-slate-500 bg-slate-200/50 dark:bg-slate-800 px-2 py-0.5 rounded">Total: 48</span>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Identificador / Título</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider">Data de Instalação</th>
+<th class="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-wider text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">KB5034765</span>
+<span class="text-xs text-slate-500">2024-02 Cumulative Update for Windows 11 Version 23H2 for x64-based Systems</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">14/02/2024</td>
+<td class="px-6 py-4 text-right">
+<button class="text-xs font-bold text-danger/80 hover:text-danger hover:bg-danger/10 px-3 py-1.5 rounded transition-all uppercase tracking-wide">Desinstalar</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">KB5034441</span>
+<span class="text-xs text-slate-500">Windows Recovery Environment Update for Windows 11</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">12/02/2024</td>
+<td class="px-6 py-4 text-right">
+<button class="text-xs font-bold text-danger/80 hover:text-danger hover:bg-danger/10 px-3 py-1.5 rounded transition-all uppercase tracking-wide">Desinstalar</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">KB4023057</span>
+<span class="text-xs text-slate-500">Update for Windows 10/11 Service Components</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">05/02/2024</td>
+<td class="px-6 py-4 text-right">
+<button class="text-xs font-bold text-danger/80 hover:text-danger hover:bg-danger/10 px-3 py-1.5 rounded transition-all uppercase tracking-wide">Desinstalar</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">KB5034122</span>
+<span class="text-xs text-slate-500">Security Intelligence Update for Microsoft Defender Antivirus</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500">28/01/2024</td>
+<td class="px-6 py-4 text-right">
+<button class="text-xs font-bold text-danger/80 hover:text-danger hover:bg-danger/10 px-3 py-1.5 rounded transition-all uppercase tracking-wide">Desinstalar</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<footer class="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Canal de Atualização</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Semi-Annual Channel (Targeted)</span>
+</div>
+<div class="w-px h-8 bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Otimização de Entrega</span>
+<span class="text-sm font-semibold text-green-600">Ativo</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition-all shadow-lg shadow-primary/20">
+<span class="material-icons">sync</span>
+            Verificar Agora
+        </button>
+</footer>
+</main>
+<div class="fixed bottom-24 right-8 pointer-events-none opacity-5 dark:opacity-10 scale-150 transform rotate-12 translate-x-1/4">
+<span class="material-symbols-outlined text-[350px] text-slate-400">update</span>
+</div>
+
+</body></html>

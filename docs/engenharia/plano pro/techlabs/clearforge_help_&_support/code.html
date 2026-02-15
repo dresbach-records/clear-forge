@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .sidebar-item-active {
+      border-left: 3px solid #137fec;
+      background-color: rgba(19, 127, 236, 0.08);
+    }
+  </style>
+<title>CLEARFORGE | Ajuda e Suporte</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 min-h-screen flex">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col hidden lg:flex">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-round text-white text-xl">bolt</span>
+</div>
+<span class="font-bold text-lg tracking-tight text-slate-900 dark:text-white">CLEARFORGE</span>
+</div>
+<nav class="flex-1 px-4 py-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">memory</span>
+<span class="text-sm font-medium">Otimização</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">security</span>
+<span class="text-sm font-medium">Segurança</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">history</span>
+<span class="text-sm font-medium">Logs do Sistema</span>
+</a>
+<div class="pt-4 pb-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 px-3">Suporte</div>
+<a class="sidebar-item-active flex items-center gap-3 px-3 py-2 text-primary rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">help_outline</span>
+<span class="text-sm font-semibold">Ajuda e Suporte</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors" href="#">
+<span class="material-icons-round text-lg">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-primary/10 dark:bg-primary/5 rounded-lg p-4 border border-primary/20">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-bold text-primary uppercase">Assinatura</span>
+<span class="text-[10px] px-1.5 py-0.5 bg-primary text-white rounded font-bold">PRO</span>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 mb-3 leading-relaxed">Você possui acesso total a todos os recursos de otimização.</p>
+<button class="w-full py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold rounded hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">Gerenciar Conta</button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- Top Header -->
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">Ajuda e Suporte</h1>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1.5 rounded-full border border-primary/20">
+<span class="material-icons-round text-primary text-sm">workspace_premium</span>
+<span class="text-sm font-semibold text-primary">Plano: PRO</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Professional user profile picture headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB36TmFbVz0LuJLGn-pL8u-UDKVBE_fC9XZxU0SmW3ykPOBaFob0_yhNIj8fvrsA_nCziwEtPVO707d8yt7lwVPcYiwGb13t7I_1jOBeONB4_bYC_l18CA1-tFu7gUtb9ijOzFctOXYllvXyPWQvm1nP0wIgAyNLG8pQq3VQZpJAECSaXiqlRhBLYwq3jU1u-pGXb79NzNWpidGkLMeaseN8FV2P4pn4Ipfy-mJcegJDDFIwe-n9EzqL0zlQ6PtDBxblumSZuxGtT0"/>
+</div>
+</div>
+</header>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-4xl mx-auto space-y-10">
+<!-- Search Section -->
+<section class="text-center space-y-4">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Como podemos ajudar?</h2>
+<div class="relative max-w-2xl mx-auto">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none text-slate-900 dark:text-white" placeholder="Pesquisar por erro, funcionalidade ou configuração..." type="text"/>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-icons-round text-primary">quiz</span>
+              FAQ Técnico
+            </h3>
+<button class="text-sm text-primary font-medium hover:underline">Ver todos os tópicos</button>
+</div>
+<div class="space-y-3">
+<!-- Accordion 1 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+<button class="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span class="font-semibold text-slate-700 dark:text-slate-200">Instalação e Licenciamento</span>
+<span class="material-icons-round text-slate-400">expand_more</span>
+</button>
+<div class="px-6 pb-4 pt-2">
+<div class="space-y-3">
+<div class="p-3 bg-slate-50 dark:bg-slate-900/50 rounded-lg border border-slate-100 dark:border-slate-800">
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-1">Como ativar minha chave PRO?</p>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Vá em Configurações &gt; Conta e insira o código de 25 dígitos recebido por e-mail. A ativação é instantânea e requer conexão com a internet.</p>
+</div>
+<div class="p-3">
+<p class="text-sm font-semibold text-slate-800 dark:text-slate-100 mb-1">Posso usar em mais de um computador?</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">A licença Padrão permite 1 dispositivo, enquanto a licença PRO permite até 3 ativações simultâneas.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion 2 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden shadow-sm">
+<button class="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span class="font-semibold text-slate-700 dark:text-slate-200">Otimização e Segurança</span>
+<span class="material-icons-round text-slate-400">expand_more</span>
+</button>
+<div class="px-6 py-4 border-t border-slate-100 dark:border-slate-700 hidden">
+<!-- Expansion Content Placeholder -->
+</div>
+</div>
+<!-- Accordion 3 -->
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden shadow-sm">
+<button class="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+<span class="font-semibold text-slate-700 dark:text-slate-200">Erros Comuns (0x8004/0x8007)</span>
+<span class="material-icons-round text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Support Channels -->
+<section class="space-y-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="material-icons-round text-primary">contact_support</span>
+            Canais de Contato
+          </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- PRO Chat -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 flex flex-col items-center text-center group hover:border-primary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+<span class="material-icons-round">forum</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Chat em Tempo Real</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 flex-1">Fale agora com um técnico especializado. Exclusivo para usuários PRO.</p>
+<button class="w-full py-2 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-colors">Iniciar Chat</button>
+</div>
+<!-- Support Ticket -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 flex flex-col items-center text-center group hover:border-primary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-4 text-slate-600 dark:text-slate-300 group-hover:scale-110 transition-transform">
+<span class="material-icons-round">confirmation_number</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Abrir Ticket</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 flex-1">Relate problemas técnicos complexos. Resposta em até 24 horas úteis.</p>
+<button class="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Novo Ticket</button>
+</div>
+<!-- Documentation -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 flex flex-col items-center text-center group hover:border-primary transition-all shadow-sm">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center mb-4 text-slate-600 dark:text-slate-300 group-hover:scale-110 transition-transform">
+<span class="material-icons-round">description</span>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-2">Documentação</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-4 flex-1">Guia completo de uso, comandos avançados e requisitos de sistema.</p>
+<button class="w-full py-2 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-bold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">Ler Guia</button>
+</div>
+</div>
+</section>
+<!-- Version Info -->
+<section class="bg-slate-900 dark:bg-slate-950 rounded-xl p-6 text-white flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden relative">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-icons-round text-9xl">info</span>
+</div>
+<div class="relative z-10 flex items-center gap-4">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-primary text-2xl">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Informações de Versão</h4>
+<p class="text-sm text-slate-400">CLEARFORGE Desktop v2.4.1 (Build 8820)</p>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 relative z-10">
+<span class="text-xs text-emerald-400 font-medium flex items-center gap-1">
+<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              Você está usando a versão mais recente
+            </span>
+<button class="px-6 py-2 bg-primary text-white text-sm font-bold rounded hover:bg-primary/90 transition-colors">Verificar Atualizações</button>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Meta -->
+<footer class="h-10 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center px-8 text-[11px] text-slate-400 justify-between">
+<div>ID de Suporte: <span class="text-slate-600 dark:text-slate-300">CF-8820-X92-2024</span></div>
+<div class="flex gap-4">
+<a class="hover:text-primary" href="#">Termos de Uso</a>
+<a class="hover:text-primary" href="#">Privacidade</a>
+<span>© 2024 ClearForge Inc.</span>
+</div>
+</footer>
+</main>
+</body></html>

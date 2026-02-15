@@ -1,0 +1,568 @@
+{
+  "Version": 1,
+  "Hash": "3QvpPcd0lGpb3I4sk0hVwM7CFOi9vLBozxU9hoeW2l4=",
+  "Source": "Clearforge.Api",
+  "BasePath": "_content/Clearforge.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Clearforge.Api/wwwroot",
+      "Source": "Clearforge.Api",
+      "ContentRoot": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/",
+      "BasePath": "_content/Clearforge.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/0te77nqy6q-j1k0ec1u6m.gz",
+      "SourceId": "Clearforge.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/Clearforge.Api",
+      "RelativePath": "favicon#[.{fingerprint=j1k0ec1u6m}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ximkhabw6o",
+      "Integrity": "94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico",
+      "SourceId": "Clearforge.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/",
+      "BasePath": "_content/Clearforge.Api",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j1k0ec1u6m",
+      "Integrity": "d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/icon.png",
+      "SourceId": "Clearforge.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/",
+      "BasePath": "_content/Clearforge.Api",
+      "RelativePath": "images/icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a4tqtwr080",
+      "Integrity": "6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/icon.png"
+    },
+    {
+      "Identity": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/logo.png",
+      "SourceId": "Clearforge.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/",
+      "BasePath": "_content/Clearforge.Api",
+      "RelativePath": "images/logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cah28iwz3w",
+      "Integrity": "BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW+zd8Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/logo.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/0te77nqy6q-j1k0ec1u6m.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000018842682"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53070"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "240702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/0te77nqy6q-j1k0ec1u6m.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53070"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.j1k0ec1u6m.ico",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/0te77nqy6q-j1k0ec1u6m.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000018842682"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53070"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1k0ec1u6m"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.j1k0ec1u6m.ico",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "240702"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1k0ec1u6m"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck+MtomUHg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.j1k0ec1u6m.ico.gz",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/obj/Debug/net9.0/compressed/0te77nqy6q-j1k0ec1u6m.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53070"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j1k0ec1u6m"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-94dPntawC4ropKHCZUdYE1iwSDMQEfPLHx6TpiQUWpA="
+        }
+      ]
+    },
+    {
+      "Route": "images/icon.a4tqtwr080.png",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a4tqtwr080"
+        },
+        {
+          "Name": "label",
+          "Value": "images/icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0="
+        }
+      ]
+    },
+    {
+      "Route": "images/icon.png",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59075"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.cah28iwz3w.png",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW+zd8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cah28iwz3w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW+zd8Y="
+        }
+      ]
+    },
+    {
+      "Route": "images/logo.png",
+      "AssetFile": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68873"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW+zd8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Feb 2026 01:23:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW+zd8Y="
+        }
+      ]
+    }
+  ]
+}

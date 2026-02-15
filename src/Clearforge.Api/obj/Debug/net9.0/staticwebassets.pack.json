@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/icon.png",
+      "PackagePath": "staticwebassets/images/icon.png"
+    },
+    {
+      "Id": "/home/user/clear-forge/src/Clearforge.Api/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Clearforge.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Clearforge.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.Clearforge.Api.props",
+      "PackagePath": "build\\Clearforge.Api.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.Clearforge.Api.props",
+      "PackagePath": "buildMultiTargeting\\Clearforge.Api.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.Clearforge.Api.props",
+      "PackagePath": "buildTransitive\\Clearforge.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

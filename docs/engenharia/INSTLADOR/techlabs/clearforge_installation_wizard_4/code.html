@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "success": "#22c55e",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Segoe UI", "Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "8px",
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display;
+            }
+        }
+    </style>
+<title>CLEARFORGE Payment Success</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[560px] bg-white dark:bg-slate-900 shadow-2xl rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col h-auto">
+<div class="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xs">settings_suggest</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">CLEARFORGE - Ativação</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-icons text-lg">minimize</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-icons text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="p-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-success text-5xl font-bold">check_circle</span>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Pagamento Confirmado com Sucesso!</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-md mb-8">
+            Bem-vindo ao <strong>CLEARFORGE PRO</strong>. Sua licença foi ativada e todas as funcionalidades avançadas já estão disponíveis para otimizar seu sistema.
+        </p>
+<div class="w-full bg-slate-50 dark:bg-slate-800/50 rounded-lg p-5 border border-slate-100 dark:border-slate-700/50 mb-8 space-y-3">
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Número do Pedido</span>
+<span class="text-slate-900 dark:text-slate-200 font-mono font-medium">#CF-88294-XP</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Plano Ativado</span>
+<span class="text-slate-900 dark:text-slate-200 font-medium">PRO Anual</span>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-slate-500 dark:text-slate-400 uppercase tracking-wider font-semibold">Data</span>
+<span class="text-slate-900 dark:text-slate-200 font-medium">24 de Maio, 2024</span>
+</div>
+</div>
+<div class="w-full space-y-4">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                Ir para o Dashboard
+                <span class="material-icons text-lg">dashboard</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors flex items-center justify-center gap-2 mx-auto">
+<span class="material-icons text-base">download</span>
+                Baixar Recibo em PDF
+            </button>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/30 px-6 py-4 flex justify-center items-center border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold">
+<span class="material-icons text-xs">verified_user</span>
+            Ambiente Seguro &amp; Licenciado
+        </div>
+</div>
+</div>
+<div class="fixed top-0 left-0 w-full h-full -z-10 opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-success rounded-full blur-[100px]"></div>
+</div>
+
+</body></html>

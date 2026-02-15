@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - Personalização e Tema</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0078D4",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "slate-accent": "#475569",
+                "steel-accent": "#64748b",
+                "teal-accent": "#0d9488",
+              },
+              fontFamily: {
+                "display": ["Segoe UI", "Inter", "sans-serif"]
+              },
+              borderRadius: {
+                "DEFAULT": "8px",
+                "lg": "8px",
+                "xl": "12px",
+                "full": "9999px"
+              },
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Segoe UI', 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .settings-card { @apply bg-white border border-slate-200 rounded-[8px] p-6 mb-6; }
+        .theme-option { @apply relative cursor-pointer border-2 rounded-[8px] p-1 transition-all hover:border-blue-200; }
+        .theme-option.active { @apply border-[#0078D4] ring-2 ring-[#0078D4]/10; }
+        .color-swatch { @apply w-8 h-8 rounded-full cursor-pointer border-2 border-transparent transition-all hover:scale-110; }
+        .color-swatch.active { @apply border-white ring-2 ring-slate-300; }
+        .btn-primary { @apply bg-[#0078D4] hover:bg-[#006cc0] text-white px-6 py-2 rounded-[8px] font-semibold transition-colors flex items-center justify-center gap-2; }
+        .btn-ghost { @apply bg-transparent hover:bg-slate-100 text-slate-600 px-6 py-2 rounded-[8px] font-semibold transition-colors flex items-center justify-center gap-2; }
+        .toggle-switch { @apply relative inline-flex h-6 w-11 items-center rounded-full bg-slate-200 transition-colors focus:outline-none; }
+        .toggle-switch.active { @apply bg-[#0078D4]; }
+        .toggle-dot { @apply inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1; }
+        .toggle-switch.active .toggle-dot { @apply translate-x-6; }
+    </style>
+</head>
+<body class="bg-[#fcfcfc] font-display text-slate-800">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white border-r border-slate-200 flex flex-col shrink-0">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-[#0078D4] rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 uppercase">CLEARFORGE</h1>
+</div>
+<div class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-500 border border-slate-200">
+                PLANO: GRATUITO
+            </div>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
+<span class="material-icons text-lg text-slate-400">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
+<span class="material-icons text-lg text-slate-400">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
+<span class="material-icons text-lg text-slate-400">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" href="#">
+<span class="material-icons text-lg text-slate-400">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 hover:bg-slate-100 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">build</span>
+                    Ferramentas
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 text-amber-600 px-1.5 py-0.5 rounded border border-amber-200">PRO</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#0078D4]/10 text-[#0078D4] font-medium" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Configurações de Personalização</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors mr-2">
+<span class="material-icons text-xs">workspace_premium</span>
+                    UPGRADE PARA PRO
+                </button>
+<div class="h-8 w-px bg-slate-200"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkOtl4tGi7zTY8TPhKIradf0qI4JDPjIizcx8cYDyebqmbl1UqPOrfyA7EhjjVkRbqc_RCULF0eAEkBxaL8te4bU6i9VYJ3nTzfGk6qUVE3HT5N1KNCfr2IYFnOCl9yrqJ3Y3bysl4-DqPhbTg4HrgPbdWBkmBbURQgNIEuNlv0Cvj2UshSrbTzQPuywelpsvRpS1Qj3m3s2XSX2xei_p-n5NaqRr253sT78FmOPv_3dAtbyZPiZZlowQNnkAbun8oqPnxyPhPOlQ"/>
+<span class="text-sm font-medium text-slate-700">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto bg-slate-50/50 p-8">
+<div class="max-w-4xl mx-auto">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-slate-900">Personalização e Tema</h2>
+<p class="text-slate-500 text-sm">Ajuste a aparência do CLEARFORGE para se adequar ao seu estilo de trabalho.</p>
+</div>
+<div class="settings-card">
+<h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-6">Tema do Aplicativo</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col gap-3">
+<div class="theme-option active">
+<div class="bg-white aspect-video rounded-md border border-slate-200 p-2 flex flex-col gap-1.5">
+<div class="h-2 w-1/2 bg-slate-100 rounded"></div>
+<div class="h-8 w-full bg-slate-50 rounded border border-slate-100 flex items-center px-2">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="h-2 w-3/4 bg-slate-100 rounded"></div>
+</div>
+<div class="absolute top-2 right-2 text-primary">
+<span class="material-icons text-sm">check_circle</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-center text-slate-700">Claro Clássico</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="theme-option">
+<div class="bg-slate-100 aspect-video rounded-md border border-slate-200 p-2 flex flex-col gap-1.5">
+<div class="h-2 w-1/2 bg-slate-200 rounded"></div>
+<div class="h-8 w-full bg-slate-200/50 rounded border border-slate-300/50 flex items-center px-2">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="h-2 w-3/4 bg-slate-200 rounded"></div>
+</div>
+</div>
+<span class="text-sm font-semibold text-center text-slate-700">Cinza Corporativo</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="theme-option">
+<div class="bg-[#fdfbf7] aspect-video rounded-md border border-[#e8e4db] p-2 flex flex-col gap-1.5">
+<div class="h-2 w-1/2 bg-[#efede7] rounded"></div>
+<div class="h-8 w-full bg-[#f4f2eb] rounded border border-[#e8e4db] flex items-center px-2">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="h-2 w-3/4 bg-[#efede7] rounded"></div>
+</div>
+</div>
+<span class="text-sm font-semibold text-center text-slate-700">Suave</span>
+</div>
+</div>
+</div>
+<div class="settings-card">
+<h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-6">Destaque de Interface</h3>
+<div class="flex items-center gap-4">
+<div class="color-swatch bg-[#0078D4] active" title="Default Blue"></div>
+<div class="color-swatch bg-slate-600" title="Slate"></div>
+<div class="color-swatch bg-slate-400" title="Steel"></div>
+<div class="color-swatch bg-teal-600" title="Teal"></div>
+<span class="text-sm text-slate-500 ml-2">Selecione uma cor de destaque para botões e links.</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="settings-card mb-0">
+<h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-6">Densidade da Interface</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="density" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700">Padrão</span>
+<span class="text-xs text-slate-500">Espaçamento equilibrado para uso geral.</span>
+</div>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 text-primary border-slate-300 focus:ring-primary" name="density" type="radio"/>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700">Compacto</span>
+<span class="text-xs text-slate-500">Ideal para telas pequenas ou visualização densa.</span>
+</div>
+</label>
+</div>
+</div>
+<div class="settings-card mb-0 flex flex-col">
+<h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-6">Efeitos Visuais</h3>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-700">Transparência suave</span>
+<span class="text-xs text-slate-500">Habilita efeitos de desfoque nas janelas laterais.</span>
+</div>
+<button class="toggle-switch active">
+<span class="toggle-dot"></span>
+</button>
+</div>
+<div class="mt-auto pt-4 flex items-center gap-2 text-amber-600 bg-amber-50 p-3 rounded-lg border border-amber-100">
+<span class="material-icons text-sm">info</span>
+<span class="text-[11px] font-medium leading-tight">Alguns efeitos podem exigir mais processamento gráfico.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="h-20 bg-white border-t border-slate-200 px-8 flex items-center justify-end gap-3 shrink-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<button class="btn-ghost">
+                Restaurar Padrões
+            </button>
+<button class="btn-primary">
+<span class="material-icons text-sm">save</span>
+                Salvar Alterações
+            </button>
+</footer>
+</main>
+</div>
+
+</body></html>

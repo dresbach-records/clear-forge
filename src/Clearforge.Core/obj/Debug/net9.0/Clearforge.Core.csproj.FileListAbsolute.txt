@@ -1,0 +1,12 @@
+/home/user/clear-forge/src/Clearforge.Core/bin/Debug/net9.0/Clearforge.Core.deps.json
+/home/user/clear-forge/src/Clearforge.Core/bin/Debug/net9.0/Clearforge.Core.dll
+/home/user/clear-forge/src/Clearforge.Core/bin/Debug/net9.0/Clearforge.Core.pdb
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.AssemblyInfoInputs.cache
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.AssemblyInfo.cs
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.csproj.CoreCompileInputs.cache
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.sourcelink.json
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.dll
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/refint/Clearforge.Core.dll
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/Clearforge.Core.pdb
+/home/user/clear-forge/src/Clearforge.Core/obj/Debug/net9.0/ref/Clearforge.Core.dll

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - O que há de novo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0078D4",
+                        "success": "#107C10",
+                        "warning": "#D83B01",
+                        "danger": "#A4262C",
+                        "neutral-light": "#F3F3F3",
+                        "neutral-dark": "#201F1E",
+                        "gray-100": "#F3F3F3",
+                        "gray-200": "#EDEBE9",
+                        "gray-300": "#D2D0CE",
+                        "gray-400": "#A19F9D",
+                        "gray-500": "#605E5C",
+                        "gray-600": "#323130",
+                    },
+                    fontFamily: {
+                        "segoe": ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                    },
+                    boxShadow: {
+                        "soft": "0 2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.12)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-segoe bg-white text-neutral-dark min-h-screen flex flex-col;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+<nav class="w-full border-b border-gray-100 px-8 py-4 flex justify-between items-center bg-white sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-[18px]">bolt</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">ClearForge</span>
+</div>
+<div class="px-3 py-1 bg-gray-100 text-gray-500 text-xs font-bold rounded-full border border-gray-200">
+            VERSÃO 2.0.0
+        </div>
+</nav>
+<main class="flex-grow max-w-5xl mx-auto w-full px-8 py-12">
+<header class="text-center mb-16">
+<div class="inline-block px-4 py-1.5 bg-primary/5 text-primary text-xs font-bold rounded-full mb-6 border border-primary/10">
+                ATUALIZAÇÃO DE SISTEMA
+            </div>
+<h1 class="text-5xl font-extrabold text-neutral-dark mb-4 tracking-tight">O que há de novo no <span class="text-primary">ClearForge v2.0</span></h1>
+<p class="text-gray-500 text-lg max-w-2xl mx-auto">Preparamos melhorias significativas para levar o desempenho do seu Windows ao próximo nível.</p>
+</header>
+<section class="grid md:grid-cols-3 gap-8 mb-20">
+<div class="bg-white p-8 rounded-xl border border-gray-100 shadow-soft hover:shadow-lg transition-shadow duration-300 text-center flex flex-col items-center">
+<div class="w-20 h-20 bg-primary/5 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-5xl font-light">language</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-neutral-dark">Novo Otimizador de Rede</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Melhore drasticamente a estabilidade da sua conexão e reduza a latência em tempo real.</p>
+</div>
+<div class="bg-white p-8 rounded-xl border border-gray-100 shadow-soft hover:shadow-lg transition-shadow duration-300 text-center flex flex-col items-center">
+<div class="w-20 h-20 bg-danger/5 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-danger text-5xl font-light">encrypted</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-neutral-dark">Destruidor de Dados Militar</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Exclusão permanente e irrecuperável de arquivos sensíveis com algoritmos de alto nível.</p>
+</div>
+<div class="bg-white p-8 rounded-xl border border-gray-100 shadow-soft hover:shadow-lg transition-shadow duration-300 text-center flex flex-col items-center">
+<div class="w-20 h-20 bg-success/5 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-success text-5xl font-light">dashboard_customize</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-neutral-dark">Melhorias na Interface</h3>
+<p class="text-gray-500 text-sm leading-relaxed">Navegação acelerada e redesenhada para uma experiência de uso intuitiva e moderna.</p>
+</div>
+</section>
+<section class="max-w-3xl mx-auto">
+<h2 class="text-base font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-3">
+<span class="h-px bg-gray-200 flex-grow"></span>
+                Notas da Atualização
+                <span class="h-px bg-gray-200 flex-grow"></span>
+</h2>
+<div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-icons text-success text-sm mt-0.5">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-neutral-dark">Otimização de Memória</p>
+<p class="text-xs text-gray-500">Redução de 15% no consumo de RAM durante processos em segundo plano.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-success text-sm mt-0.5">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-neutral-dark">Correção de Bugs</p>
+<p class="text-xs text-gray-500">Resolvido problema de compatibilidade com as atualizações mais recentes do Windows 11.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-success text-sm mt-0.5">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-neutral-dark">Motor de Limpeza</p>
+<p class="text-xs text-gray-500">Algoritmo de limpeza de registro 2x mais rápido que na versão anterior.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons text-success text-sm mt-0.5">check_circle</span>
+<div>
+<p class="text-sm font-semibold text-neutral-dark">Localização</p>
+<p class="text-xs text-gray-500">Melhorias na tradução para Português (Brasil) em todos os módulos.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="mt-16 text-center">
+<button class="px-12 py-4 bg-primary text-white text-lg font-bold rounded shadow-lg shadow-primary/20 hover:bg-[#006cc0] transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                Começar a Explorar
+            </button>
+<p class="mt-4 text-xs text-gray-400">Ao continuar, você concorda com os Termos de Serviço da ClearForge.</p>
+</section>
+</main>
+<footer class="border-t border-gray-100 py-8 text-center text-gray-400 text-xs">
+<p>© 2024 CLEARFORGE - Sistema de Otimização Profissional</p>
+</footer>
+
+</body></html>

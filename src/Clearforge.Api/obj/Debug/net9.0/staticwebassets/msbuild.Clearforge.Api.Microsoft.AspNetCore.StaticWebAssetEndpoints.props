@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/favicon.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck\u002BMtomUHg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"240702"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck\u002BMtomUHg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/favicon.j1k0ec1u6m.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"j1k0ec1u6m"},{"Name":"integrity","Value":"sha256-d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck\u002BMtomUHg="},{"Name":"label","Value":"_content/Clearforge.Api/favicon.ico"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"240702"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022d3M/5nCO/mhB2s2jZbCPR2y7kxiVVUUrBck\u002BMtomUHg=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/images/icon.a4tqtwr080.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a4tqtwr080"},{"Name":"integrity","Value":"sha256-6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0="},{"Name":"label","Value":"_content/Clearforge.Api/images/icon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"59075"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/images/icon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"59075"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226oItgwqSo7QzzkMKu/Wtfy65cL2DOPvd09dYZA8MeY0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/images/logo.cah28iwz3w.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cah28iwz3w"},{"Name":"integrity","Value":"sha256-BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW\u002Bzd8Y="},{"Name":"label","Value":"_content/Clearforge.Api/images/logo.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"68873"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW\u002Bzd8Y=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Clearforge.Api/images/logo.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW\u002Bzd8Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"68873"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022BBS24KZ/lPdJvYA6vjc0mlZoUAj/G/XkAJ0kCW\u002Bzd8Y=\u0022"},{"Name":"Last-Modified","Value":"Sun, 15 Feb 2026 01:23:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

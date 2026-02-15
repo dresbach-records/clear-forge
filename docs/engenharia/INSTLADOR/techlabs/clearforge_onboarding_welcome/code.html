@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>CLEARFORGE - Onboarding</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 min-h-screen flex items-center justify-center p-6">
+<!-- Main Container -->
+<div class="max-w-4xl w-full bg-white dark:bg-slate-900 shadow-2xl rounded-xl overflow-hidden border border-slate-200/50 dark:border-slate-800/50 flex flex-col md:flex-row min-h-[600px]">
+<!-- Sidebar Branding -->
+<div class="w-full md:w-1/3 bg-primary p-8 flex flex-col justify-between text-white relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-12">
+<span class="material-icons text-3xl">terminal</span>
+<span class="font-bold text-xl tracking-tight uppercase italic">Clearforge</span>
+</div>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/30">
+<span class="material-icons text-sm">check</span>
+</div>
+<div>
+<h3 class="font-semibold text-sm">Conexão Segura</h3>
+<p class="text-xs text-blue-100/80">Protocolos de criptografia ativos</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 border border-white/30">
+<span class="material-icons text-sm">speed</span>
+</div>
+<div>
+<h3 class="font-semibold text-sm">Alta Performance</h3>
+<p class="text-xs text-blue-100/80">Otimização de kernel em tempo real</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract decorative background for sidebar -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-black rounded-full -ml-10 -mb-10 blur-3xl"></div>
+</div>
+<div class="relative z-10 text-[10px] text-blue-100/50 uppercase tracking-widest font-bold">
+                v4.2.0 Stable Build
+            </div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 p-8 md:p-12 flex flex-col">
+<!-- Step Header -->
+<div class="mb-10">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Bem-vindo ao Clearforge</h1>
+<p class="text-slate-500 dark:text-slate-400">Vamos analisar e otimizar o desempenho do seu sistema para garantir estabilidade e velocidade.</p>
+</div>
+<!-- Section 1: Analysis -->
+<div class="mb-10 p-6 border border-primary/20 bg-primary/5 rounded-xl border-dashed">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="p-2 bg-primary/10 rounded-lg">
+<span class="material-icons text-primary">analytics</span>
+</div>
+<div>
+<h2 class="font-semibold text-slate-800 dark:text-slate-100 text-sm">Diagnóstico Inicial</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400">Verificação de registro, cache e processos</p>
+</div>
+</div>
+<button class="px-5 py-2.5 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-lg transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-icons text-sm">play_arrow</span>
+                        Executar Análise Inicial
+                    </button>
+</div>
+<!-- Status Bar (Ghost state) -->
+<div class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-primary transition-all duration-700"></div>
+</div>
+</div>
+<!-- Section 2: Mode Selection -->
+<div class="flex-1">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4">Selecione o Modo de Operação</h3>
+<div class="grid grid-cols-1 gap-4">
+<!-- Standard Mode -->
+<label class="relative flex items-center p-4 border-2 border-primary/40 bg-primary/5 rounded-xl cursor-pointer hover:border-primary transition-colors group">
+<input checked="" class="hidden" name="mode" type="radio"/>
+<div class="mr-4 p-3 bg-white dark:bg-slate-800 rounded-lg shadow-sm">
+<span class="material-icons text-primary">auto_fix_high</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-bold text-slate-800 dark:text-slate-100">Modo Padrão</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">Recomendado</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Otimização balanceada para usuários domésticos e gamers.</p>
+</div>
+<div class="ml-4">
+<div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-2.5 h-2.5 bg-primary rounded-full"></div>
+</div>
+</div>
+</label>
+<!-- Advanced Mode -->
+<label class="relative flex items-center p-4 border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl cursor-pointer hover:border-slate-300 dark:hover:border-slate-700 transition-colors group">
+<input class="hidden" name="mode" type="radio"/>
+<div class="mr-4 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm group-hover:bg-slate-200 dark:group-hover:bg-slate-700 transition-colors">
+<span class="material-icons text-slate-600 dark:text-slate-400">settings_input_component</span>
+</div>
+<div class="flex-1">
+<span class="font-bold text-slate-800 dark:text-slate-100 block mb-0.5">Modo Avançado</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Controle granular sobre serviços do sistema e telemetria.</p>
+</div>
+<div class="ml-4">
+<div class="w-5 h-5 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</div>
+</label>
+<!-- Enterprise Mode -->
+<label class="relative flex items-center p-4 border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-xl cursor-pointer hover:border-slate-300 dark:hover:border-slate-700 transition-colors group">
+<input class="hidden" name="mode" type="radio"/>
+<div class="mr-4 p-3 bg-slate-100 dark:bg-slate-800 rounded-lg shadow-sm group-hover:bg-slate-200 dark:group-hover:bg-slate-700 transition-colors">
+<span class="material-icons text-slate-600 dark:text-slate-400">business</span>
+</div>
+<div class="flex-1">
+<span class="font-bold text-slate-800 dark:text-slate-100 block mb-0.5">Modo Empresarial</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Focado em estabilidade crítica e conformidade de rede.</p>
+</div>
+<div class="ml-4">
+<div class="w-5 h-5 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<div class="flex items-center gap-2 text-slate-400 dark:text-slate-500">
+<span class="material-icons text-sm">lock</span>
+<span class="text-[11px] font-medium tracking-wide uppercase">Sandbox seguro isolado</span>
+</div>
+<button class="px-10 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all shadow-xl shadow-primary/20 flex items-center gap-2">
+                    Continuar
+                    <span class="material-icons">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Desktop Info Panel (Floating subtle helper) -->
+<div class="fixed bottom-6 right-6 flex items-center gap-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm p-3 px-4 rounded-xl border border-slate-200/50 dark:border-slate-700/50 shadow-lg text-[11px]">
+<div class="flex items-center gap-2 pr-4 border-r border-slate-200 dark:border-slate-700">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-slate-500 dark:text-slate-400 font-medium">SISTEMA: WINDOWS 11 PRO</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-[14px] text-slate-400">memory</span>
+<span class="text-slate-500 dark:text-slate-400 font-medium uppercase tracking-tight">CPU LOAD: 12%</span>
+</div>
+</div>
+</body></html>

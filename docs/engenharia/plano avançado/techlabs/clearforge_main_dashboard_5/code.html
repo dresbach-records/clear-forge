@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Advanced Process Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "danger": "#e11d48"
+              },
+              fontFamily: {
+                "display": ["Segoe UI", "Inter", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "8px", "lg": "8px", "xl": "8px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+          body { @apply bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200; }
+        }
+        .scrollbar-custom::-webkit-scrollbar { width: 8px; height: 8px; }
+        .scrollbar-custom::-webkit-scrollbar-track { @apply bg-transparent; }
+        .scrollbar-custom::-webkit-scrollbar-thumb { @apply bg-slate-200 dark:bg-slate-700 rounded-full; }
+        .table-row-active { @apply bg-primary/5 border-l-2 border-primary; }
+    </style>
+</head>
+<body class="overflow-hidden">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white uppercase">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-custom">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">memory</span>
+                Gerenciador Avançado
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">build</span>
+                Ferramentas
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-6 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Modo Avançado</span>
+<div class="h-4 w-px bg-slate-200 dark:bg-slate-700"></div>
+<h2 class="text-sm font-semibold text-slate-700 dark:text-slate-200">Gerenciador de Processos</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1.5 rounded text-xs font-bold transition-all border border-primary/20">
+<span class="material-symbols-outlined text-sm">security</span>
+                    ANALISAR PROCESSO
+                </button>
+<button class="flex items-center gap-2 bg-danger/10 text-danger hover:bg-danger/20 px-3 py-1.5 rounded text-xs font-bold transition-all border border-danger/20">
+<span class="material-symbols-outlined text-sm">cancel</span>
+                    FINALIZAR TAREFA
+                </button>
+</div>
+</header>
+<div class="flex-1 overflow-hidden flex flex-col bg-white dark:bg-slate-950">
+<div class="flex-1 overflow-auto scrollbar-custom">
+<table class="w-full text-left border-collapse min-w-[1000px]">
+<thead class="sticky top-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-10">
+<tr>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider">Processo</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider w-20">ID</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider w-24">CPU</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider w-32">Memória</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider w-24">Disco</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider w-24">Rede</th>
+<th class="px-4 py-3 text-xs font-bold text-slate-500 uppercase tracking-wider">Descrição Técnica</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800/50">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 cursor-pointer text-sm">
+<td class="px-4 py-3 flex items-center gap-3">
+<span class="material-icons text-primary text-lg">window</span>
+<span class="font-medium text-slate-900 dark:text-slate-100">explorer.exe</span>
+</td>
+<td class="px-4 py-3 text-slate-500 font-mono">4128</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="w-12">1.4%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 14%"></div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 font-medium">142.4 MB</td>
+<td class="px-4 py-3 text-slate-500">0.1 MB/s</td>
+<td class="px-4 py-3 text-slate-500">0 Mbps</td>
+<td class="px-4 py-3 text-xs text-slate-400 italic">Windows Explorer - Shell do Sistema</td>
+</tr>
+<tr class="table-row-active cursor-pointer text-sm">
+<td class="px-4 py-3 flex items-center gap-3">
+<span class="material-icons text-primary text-lg">language</span>
+<span class="font-medium text-slate-900 dark:text-slate-100">chrome.exe</span>
+</td>
+<td class="px-4 py-3 text-slate-500 font-mono">10592</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="w-12 text-orange-500 font-bold">12.8%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="h-full bg-orange-500 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 font-medium text-orange-500 font-bold">1,842.1 MB</td>
+<td class="px-4 py-3 text-slate-500">2.4 MB/s</td>
+<td class="px-4 py-3 text-slate-500">1.2 Mbps</td>
+<td class="px-4 py-3 text-xs text-slate-400 italic">Google Chrome - Navegador Web (8 subprocessos)</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 cursor-pointer text-sm">
+<td class="px-4 py-3 flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">settings</span>
+<span class="font-medium text-slate-900 dark:text-slate-100">svchost.exe (LocalSystem)</span>
+</td>
+<td class="px-4 py-3 text-slate-500 font-mono">924</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="w-12">0.2%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 2%"></div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 font-medium">45.8 MB</td>
+<td class="px-4 py-3 text-slate-500">0 MB/s</td>
+<td class="px-4 py-3 text-slate-500">0 Mbps</td>
+<td class="px-4 py-3 text-xs text-slate-400 italic">Host de Serviço: Serviços Locais</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 cursor-pointer text-sm">
+<td class="px-4 py-3 flex items-center gap-3">
+<span class="material-icons text-primary text-lg">security</span>
+<span class="font-medium text-slate-900 dark:text-slate-100">ClearForge.exe</span>
+</td>
+<td class="px-4 py-3 text-slate-500 font-mono">15420</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="w-12">0.5%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="h-full bg-primary rounded-full" style="width: 5%"></div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 font-medium">32.2 MB</td>
+<td class="px-4 py-3 text-slate-500">0.0 MB/s</td>
+<td class="px-4 py-3 text-slate-500">0 Mbps</td>
+<td class="px-4 py-3 text-xs text-slate-400 italic">Processo de interface principal ClearForge</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 cursor-pointer text-sm">
+<td class="px-4 py-3 flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">code</span>
+<span class="font-medium text-slate-900 dark:text-slate-100">Code.exe</span>
+</td>
+<td class="px-4 py-3 text-slate-500 font-mono">8122</td>
+<td class="px-4 py-3">
+<div class="flex items-center gap-2">
+<span class="w-12">2.1%</span>
+<div class="flex-1 h-1 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 21%"></div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3 font-medium">856.4 MB</td>
+<td class="px-4 py-3 text-slate-500">1.2 MB/s</td>
+<td class="px-4 py-3 text-slate-500">0.5 Mbps</td>
+<td class="px-4 py-3 text-xs text-slate-400 italic">Visual Studio Code Editor</td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer class="h-48 border-t border-slate-200 dark:border-slate-800 p-4 bg-slate-50 dark:bg-slate-900 grid grid-cols-4 gap-4 shrink-0">
+<div class="bg-white dark:bg-slate-950 p-3 rounded border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">CPU - Histórico</span>
+<span class="text-xs font-bold text-emerald-500">22%</span>
+</div>
+<div class="flex-1 flex items-end gap-0.5">
+<div class="w-full bg-emerald-500/20 h-[10%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/20 h-[15%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/20 h-[30%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/20 h-[25%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/20 h-[20%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/30 h-[45%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/30 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500/40 h-[60%] rounded-t-sm"></div>
+<div class="w-full bg-emerald-500 h-[22%] rounded-t-sm"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-950 p-3 rounded border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Memória - Histórico</span>
+<span class="text-xs font-bold text-primary">64%</span>
+</div>
+<div class="flex-1 flex items-end gap-0.5">
+<div class="w-full bg-primary/40 h-[62%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[63%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[64%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[64%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[65%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[65%] rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-[64%] rounded-t-sm"></div>
+<div class="w-full bg-primary h-[64%] rounded-t-sm"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-950 p-3 rounded border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Disco - Atividade</span>
+<span class="text-xs font-bold text-slate-500">3.1 MB/s</span>
+</div>
+<div class="flex-1 flex items-end gap-0.5">
+<div class="w-full bg-slate-300 h-[5%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[2%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[40%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[10%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[5%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[80%] rounded-t-sm"></div>
+<div class="w-full bg-slate-300 h-[15%] rounded-t-sm"></div>
+<div class="w-full bg-slate-400 h-[30%] rounded-t-sm"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-950 p-3 rounded border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="flex justify-between items-center mb-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Rede - Tráfego</span>
+<span class="text-xs font-bold text-amber-500">1.2 Mbps</span>
+</div>
+<div class="flex-1 flex items-end gap-0.5">
+<div class="w-full bg-amber-500/20 h-[10%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[8%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[12%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[11%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[25%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[15%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500/20 h-[10%] rounded-t-sm"></div>
+<div class="w-full bg-amber-500 h-[18%] rounded-t-sm"></div>
+</div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+
+</body></html>

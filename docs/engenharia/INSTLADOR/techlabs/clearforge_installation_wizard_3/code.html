@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Segoe UI", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            input {
+                @apply bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 text-sm;
+            }
+            label {
+                @apply block mb-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider;
+            }
+        }
+    </style>
+<title>CLEARFORGE PRO Checkout</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex items-center justify-center p-4">
+<div class="w-full max-w-[900px] bg-white dark:bg-slate-900 shadow-2xl rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col h-auto">
+<div class="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xs">settings_suggest</span>
+</div>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">CLEARFORGE - Checkout Seguro</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">
+<span class="material-icons text-lg">minimize</span>
+</button>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-icons text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12">
+<div class="md:col-span-5 p-8 bg-slate-50 dark:bg-slate-800/20 border-r border-slate-100 dark:border-slate-800">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-6">Resumo do Pedido</h2>
+<div class="flex items-start gap-4 mb-8">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-white">CLEARFORGE PRO</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Assinatura Anual</p>
+</div>
+<div class="ml-auto">
+<span class="text-sm font-bold text-slate-900 dark:text-white">R$ 49,90</span>
+</div>
+</div>
+<div class="space-y-3 pt-6 border-t border-slate-200 dark:border-slate-700">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Subtotal</span>
+<span class="text-slate-700 dark:text-slate-300">R$ 49,90</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Impostos</span>
+<span class="text-slate-700 dark:text-slate-300">R$ 0,00</span>
+</div>
+<div class="flex justify-between pt-3 text-lg font-bold">
+<span class="text-slate-900 dark:text-white">Total</span>
+<span class="text-primary font-bold">R$ 49,90</span>
+</div>
+</div>
+<div class="mt-8 p-4 bg-emerald-50 dark:bg-emerald-900/10 rounded-lg border border-emerald-100 dark:border-emerald-900/30">
+<div class="flex gap-3">
+<span class="material-icons text-emerald-500 text-lg">verified</span>
+<p class="text-xs text-emerald-700 dark:text-emerald-400 leading-relaxed">
+                        Você está adquirindo a licença completa com todas as funcionalidades de otimização e suporte 24/7 ativados imediatamente após a confirmação.
+                    </p>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 p-8">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white mb-6">Informações de Pagamento</h2>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex gap-2">
+<div class="px-2 py-1 border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-800">
+<img alt="Visa" class="h-4 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClmkSxx53nbSz3j2t1X2jZu2b-XFTv-RnlKIu-1qK0TnPJNl_0k5oX9R1AARB_7-9mrZIXzoDNPA0SFq0zsycw_D7sGwUiuFMom_wmt09-5Giz6m0LaWH8TV91zKX1_Gj6HMHhqG4bAQU6JSjIhSz6NriXRPh7CEvPga1-rJlNeEOX5hhWaijkEtqsYQuU0jVK0SdEpnFeAUETpW6K9cA3PxjPArP5nB92D0Sx-363ePL09fwAY3uVZ6-oqKJl-mHktphKno4zOq8"/>
+</div>
+<div class="px-2 py-1 border border-slate-200 dark:border-slate-700 rounded bg-white dark:bg-slate-800">
+<img alt="Mastercard" class="h-4 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZnCVuPrEEyNj3EfWXg3DSBiD_8s2g8iFGmOmF_A_YqXcX2ckTiGfoUqfOsYTmpSJMJ6wvgiWUccM-RNQ_FEECnviMYhjY2geC5D_Hj_0tebjRS_c06sTqdIg6iRWhj4N8TQFqndKtBHOpD2fTSS6B8i6RzsK9MmslQ0KEgaMkcHlPg1LouGtw2cisU3Jlw2RnasXV-r2Xpsyl2R0Jrdvi9PeiDDB4bj4ihpMYoSPlQzkVZ_zb7kN15Q0z7gNjJ40rcMNFw67usLs"/>
+</div>
+<div class="px-2 py-1 border border-primary/20 bg-primary/5 rounded flex items-center gap-1.5 cursor-pointer">
+<img alt="Pix" class="h-3 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi4Gy7UVf91m3MqUjy3AU4_UjdSNMlmuW2ZYLDSirYdbodqjxch7nbg0rYchJfhR5LIKIeKVYTrvD07zoKjpz8QuOwBu3JNfhECxaXOm9hgWyf0XyBAn1LPZMqpMoQcBOelBdZB_EJC3zW3-e8a7QpK2DwTohJ-cJqgBuU1K8gCJ0JDp_SuZORwl-V7ScPTP3LaQ3Tv1dhZpxP0rFlnqHkf-IVZ3GzJ8ew4FkuhfCs8HTk-H9RTMgE6fqWheCTMsVvBSf9phtPRFA"/>
+<span class="text-[10px] font-bold text-primary uppercase">Pix</span>
+</div>
+</div>
+<span class="text-xs text-slate-400 ml-auto">Cartão de Crédito Selecionado</span>
+</div>
+<form class="space-y-4">
+<div>
+<label for="full_name">Nome Completo</label>
+<input id="full_name" placeholder="Como impresso no cartão" required="" type="text"/>
+</div>
+<div>
+<label for="card_number">Número do Cartão</label>
+<div class="relative">
+<input id="card_number" placeholder="0000 0000 0000 0000" required="" type="text"/>
+<span class="material-icons absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 text-lg">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label for="exp_date">Vencimento</label>
+<input id="exp_date" placeholder="MM/AA" required="" type="text"/>
+</div>
+<div>
+<label for="cvv">CVV</label>
+<input id="cvv" placeholder="123" required="" type="text"/>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+                        Finalizar Pagamento
+                        <span class="material-icons text-lg">lock</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/30 px-6 py-4 flex justify-between items-center border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-semibold">
+<span class="material-icons text-xs">verified_user</span>
+            Compra Segura SSL
+        </div>
+<div class="flex items-center gap-3">
+<button class="text-xs font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 underline">
+                Termos de Licença
+            </button>
+<span class="text-slate-300 dark:text-slate-700">|</span>
+<button class="text-xs font-medium text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 underline">
+                Privacidade
+            </button>
+</div>
+</div>
+</div>
+<div class="fixed top-0 left-0 w-full h-full -z-10 opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
+</div>
+
+</body></html>

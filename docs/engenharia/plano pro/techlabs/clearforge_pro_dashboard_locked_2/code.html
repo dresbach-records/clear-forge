@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Analisador de Espaço em Disco</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "premium-gold": "#fbbf24",
+                        "chart-media": "#3b82f6",
+                        "chart-apps": "#8b5cf6",
+                        "chart-system": "#ef4444",
+                        "chart-others": "#94a3b8"
+                    },
+                    fontFamily: {
+                        "sans": ["Segoe UI", "Inter", "system-ui", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "12px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+        .treemap-node {
+            transition: all 0.2s ease;
+        }
+        .treemap-node:hover {
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-800 font-sans h-screen overflow-hidden">
+<div class="flex h-full">
+<aside class="w-64 border-r border-slate-200 bg-white flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl font-bold">bolt</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 uppercase">Clearforge</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors" href="#">
+<span class="material-icons text-slate-400">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons">pie_chart</span>
+                    Analisador de Disco
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors" href="#">
+<span class="material-icons text-slate-400">build</span>
+                    Ferramentas
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors" href="#">
+<span class="material-icons text-slate-400">assessment</span>
+                    Relatórios
+                </a>
+<div class="pt-6 pb-2 text-[10px] font-bold text-slate-400 uppercase px-3 tracking-widest">Configuração</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 text-slate-600 transition-colors" href="#">
+<span class="material-icons text-slate-400">settings</span>
+                    Preferências
+                </a>
+</nav>
+<div class="p-4 mt-auto">
+<div class="bg-slate-50 border border-slate-100 rounded-lg p-3">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-icons text-premium-gold text-sm">workspace_premium</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-600">Licença PRO Ativa</span>
+</div>
+<p class="text-[10px] text-slate-400">Expira em 342 dias</p>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-bold text-slate-800">Analisador de Espaço em Disco</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-100 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-[10px] font-bold text-emerald-600 tracking-tight uppercase">Status: Escaneamento Concluído</span>
+</div>
+<div class="flex items-center gap-3 pl-6 border-l border-slate-200">
+<div class="text-right">
+<p class="text-xs font-bold text-slate-900 uppercase">Admin Premium</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter">SSD Principal (C:)</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center border border-slate-200">
+<span class="material-icons text-slate-400 text-sm">person</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 custom-scrollbar">
+<div class="max-w-7xl mx-auto space-y-6">
+<div class="grid grid-cols-12 gap-6 h-[400px]">
+<div class="col-span-8 bg-white border border-slate-200 rounded-lg p-6 flex flex-col shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Distribuição de Arquivos</h3>
+<div class="flex gap-2">
+<button class="p-1.5 text-slate-400 hover:text-primary"><span class="material-icons text-sm">zoom_in</span></button>
+<button class="p-1.5 text-slate-400 hover:text-primary"><span class="material-icons text-sm">refresh</span></button>
+</div>
+</div>
+<div class="flex-1 flex gap-2 overflow-hidden">
+<div class="w-[45%] h-full flex flex-col gap-2">
+<div class="flex-1 bg-chart-media/90 treemap-node rounded-md p-4 text-white relative cursor-pointer">
+<span class="text-xs font-bold block">Vídeos</span>
+<span class="text-[10px] opacity-80 uppercase">45.2 GB</span>
+<span class="material-symbols-outlined absolute right-3 bottom-3 text-white/30 text-4xl">movie</span>
+</div>
+<div class="h-1/3 flex gap-2">
+<div class="flex-1 bg-chart-media/70 treemap-node rounded-md p-3 text-white cursor-pointer">
+<span class="text-[10px] font-bold block">Imagens</span>
+<span class="text-[8px] opacity-80 uppercase">8.1 GB</span>
+</div>
+<div class="w-1/3 bg-chart-media/50 treemap-node rounded-md p-3 text-white cursor-pointer">
+<span class="text-[10px] font-bold block">Audio</span>
+</div>
+</div>
+</div>
+<div class="w-[35%] h-full flex flex-col gap-2">
+<div class="h-[60%] bg-chart-apps/90 treemap-node rounded-md p-4 text-white relative cursor-pointer">
+<span class="text-xs font-bold block">Aplicativos</span>
+<span class="text-[10px] opacity-80 uppercase">32.8 GB</span>
+<span class="material-symbols-outlined absolute right-3 bottom-3 text-white/30 text-4xl">widgets</span>
+</div>
+<div class="flex-1 bg-chart-system/90 treemap-node rounded-md p-4 text-white relative cursor-pointer">
+<span class="text-xs font-bold block">Sistema</span>
+<span class="text-[10px] opacity-80 uppercase">24.5 GB</span>
+<span class="material-symbols-outlined absolute right-3 bottom-3 text-white/30 text-4xl">settings_suggest</span>
+</div>
+</div>
+<div class="flex-1 h-full bg-chart-others treemap-node rounded-md p-4 text-white relative cursor-pointer">
+<span class="text-xs font-bold block">Outros</span>
+<span class="text-[10px] opacity-80 uppercase">12.4 GB</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 bg-white border border-slate-200 rounded-lg p-6 shadow-sm flex flex-col">
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">Resumo de Categorias</h3>
+<div class="space-y-5 flex-1 overflow-y-auto custom-scrollbar pr-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-chart-media"></div>
+<div>
+<p class="text-xs font-bold text-slate-800">Vídeos &amp; Mídia</p>
+<p class="text-[10px] text-slate-400">45 GB • 36%</p>
+</div>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-chart-apps"></div>
+<div>
+<p class="text-xs font-bold text-slate-800">Programas &amp; Apps</p>
+<p class="text-[10px] text-slate-400">32 GB • 26%</p>
+</div>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-chart-system"></div>
+<div>
+<p class="text-xs font-bold text-slate-800">Arquivos de Sistema</p>
+<p class="text-[10px] text-slate-400">24 GB • 19%</p>
+</div>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+<div>
+<p class="text-xs font-bold text-slate-800">Documentos</p>
+<p class="text-[10px] text-slate-400">12 GB • 10%</p>
+</div>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-chart-others"></div>
+<div>
+<p class="text-xs font-bold text-slate-800">Outros</p>
+<p class="text-[10px] text-slate-400">12 GB • 9%</p>
+</div>
+</div>
+<span class="material-icons text-slate-300 text-sm">chevron_right</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-100">
+<button class="w-full py-2.5 bg-primary text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-blue-600 transition-colors">
+                                    Otimizar Espaço
+                                </button>
+</div>
+</div>
+</div>
+<div class="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+<h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Maiores Arquivos Detectados</h3>
+<span class="text-[10px] text-slate-400 font-medium">Total de 12.450 itens analisados</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-white text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
+<tr>
+<th class="px-6 py-4">Nome do Arquivo</th>
+<th class="px-6 py-4">Tamanho</th>
+<th class="px-6 py-4">Caminho do Diretório</th>
+<th class="px-6 py-4 text-right">Ação</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">video_file</span>
+<span class="text-sm font-medium text-slate-700">video_render_4k_final.mp4</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 font-medium">12.4 GB</td>
+<td class="px-6 py-4 text-xs text-slate-400">C:\Users\Admin\Documents\Projetos\Video\Renders</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1.5 text-slate-300 hover:text-red-500 transition-colors" title="Excluir">
+<span class="material-icons text-lg">delete_outline</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">folder_zip</span>
+<span class="text-sm font-medium text-slate-700">backup_completo_2023.zip</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 font-medium">8.1 GB</td>
+<td class="px-6 py-4 text-xs text-slate-400">D:\Backups\Sistema</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1.5 text-slate-300 hover:text-red-500 transition-colors" title="Excluir">
+<span class="material-icons text-lg">delete_outline</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">description</span>
+<span class="text-sm font-medium text-slate-700">database_dump_raw.sql</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 font-medium">4.2 GB</td>
+<td class="px-6 py-4 text-xs text-slate-400">C:\AppData\Local\Temp</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1.5 text-slate-300 hover:text-red-500 transition-colors" title="Excluir">
+<span class="material-icons text-lg">delete_outline</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400 text-lg">install_desktop</span>
+<span class="text-sm font-medium text-slate-700">ClearforgeSetup_PRO_v4.exe</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-600 font-medium">1.8 GB</td>
+<td class="px-6 py-4 text-xs text-slate-400">C:\Downloads</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1.5 text-slate-300 hover:text-red-500 transition-colors" title="Excluir">
+<span class="material-icons text-lg">delete_outline</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-3 bg-white border-t border-slate-50 flex justify-center">
+<button class="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">Ver todos os arquivos</button>
+</div>
+</div>
+</div>
+</div>
+<footer class="h-10 bg-white border-t border-slate-200 flex items-center justify-between px-8 text-[10px] text-slate-500 uppercase font-bold tracking-widest">
+<div>CLEARFORGE PROFESSIONAL v4.2.0-PRO</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Disco: Otimizado</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Cloud Sync: Ativo</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Encryption Vault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "security-gold": "#d4af37",
+              },
+              fontFamily: {
+                "display": ["Inter", "Segoe UI", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "8px", "lg": "8px", "xl": "12px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .vault-dropzone {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23137fec' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white shadow-sm">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-symbols-outlined text-lg">lock</span>
+                Cofre de Arquivos
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">build</span>
+                Ferramentas
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Modo Avançado</span>
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Cofre de Criptografia</span>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold uppercase border border-emerald-200 dark:border-emerald-800">Cofre Ativo</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded text-xs font-medium text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                    FIPS 140-2 Compliance
+                </div>
+<div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD250OxWQWu2QfFKCSMtl1w9zS5cA6rr0kb-Sgw31_fTXKlJWll65r9U5l60KZalTzawl_CYNjoBtg39TxCSE9Yjd9vKt_Ee34mafhQvjNoHCWBq4R0D5cE915bermxhHgq0c3Ii6kTiT9hBrWWRy_EYNEVz492qadb7WbHUdTBJ_fKTXPF8Rjmq2RmMUUerd7tpo_Q4Uet_Xat-L5klbo07AYWj8kiZTy8al3cWVI7pEiuC_JUym59vohkFE5jXlQW2M8nFbjyac"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 flex gap-8">
+<div class="flex-1 space-y-6">
+<div class="vault-dropzone bg-white dark:bg-slate-900/50 p-12 rounded flex flex-col items-center justify-center text-center transition-all hover:bg-primary/5 group cursor-pointer border-2 border-transparent">
+<div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-5xl">lock</span>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Cofre Seguro</h2>
+<p class="text-slate-500 dark:text-slate-400 mb-8 max-w-sm">Arraste arquivos aqui para criptografar instantaneamente ou clique para procurar no seu computador.</p>
+<div class="flex gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded shadow-lg shadow-primary/25 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">add_moderator</span>
+                            Criptografar Arquivos
+                        </button>
+<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold py-3 px-8 rounded transition-all">
+                            Desbloquear Todos
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">settings_input_component</span>
+                            Algoritmo de Criptografia
+                        </h3>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded text-sm py-2.5 focus:ring-primary focus:border-primary">
+<option selected="">AES-256 (Recomendado)</option>
+<option>ChaCha20-Poly1305</option>
+<option>RSA-4096 (Vault Keys)</option>
+</select>
+<p class="mt-3 text-xs text-slate-400">Padrão militar para segurança máxima e alto desempenho em CPUs modernas.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded border border-slate-200 dark:border-slate-800 shadow-sm">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">password</span>
+                            Senha de Acesso
+                        </h3>
+<div class="relative mb-3">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded text-sm py-2.5 focus:ring-primary focus:border-primary pr-10" placeholder="Definir nova senha do cofre" type="password" value="StrongP@ssw0rd2024"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-slate-400 cursor-pointer">visibility</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between text-[10px] uppercase font-bold tracking-wider text-slate-500">
+<span>Força da Senha</span>
+<span class="text-emerald-500">Muito Forte</span>
+</div>
+<div class="flex gap-1 h-1.5">
+<div class="flex-1 bg-emerald-500 rounded-full"></div>
+<div class="flex-1 bg-emerald-500 rounded-full"></div>
+<div class="flex-1 bg-emerald-500 rounded-full"></div>
+<div class="flex-1 bg-emerald-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 bg-slate-900 rounded border border-slate-700 shadow-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-security-gold text-3xl">verified</span>
+<div>
+<p class="text-white font-bold text-sm">Proteção de Nível Enterprise</p>
+<p class="text-slate-400 text-xs">Os arquivos são descriptografados apenas em memória RAM.</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-sm">lock_person</span>
+                            Bloquear Cofre
+                        </button>
+<button class="px-6 py-2.5 bg-slate-700 hover:bg-slate-600 text-white text-sm font-bold rounded transition-colors">
+                            Backup das Chaves
+                        </button>
+</div>
+</div>
+</div>
+<aside class="w-[400px] flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded flex flex-col h-full shadow-sm overflow-hidden">
+<div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-wider">Arquivos Protegidos (4)</h3>
+<span class="text-xs font-medium text-slate-400">Total: 1.2 GB</span>
+</div>
+<div class="flex-1 p-0 overflow-y-auto scrollbar-hide">
+<div class="p-4 border-b border-slate-100 dark:border-slate-800/50 flex items-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center text-slate-500 shrink-0">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200 truncate">financeiro_2023.xlsx</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter mt-0.5">AES-256 • 4.2 MB • Criptografado há 2h</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-primary hover:text-primary/80 transition-opacity">
+<span class="material-symbols-outlined">lock_open</span>
+</button>
+</div>
+<div class="p-4 border-b border-slate-100 dark:border-slate-800/50 flex items-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center text-slate-500 shrink-0">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200 truncate">identidade_backup.jpg</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter mt-0.5">AES-256 • 850 KB • Criptografado há 1d</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-primary hover:text-primary/80 transition-opacity">
+<span class="material-symbols-outlined">lock_open</span>
+</button>
+</div>
+<div class="p-4 border-b border-slate-100 dark:border-slate-800/50 flex items-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center text-slate-500 shrink-0">
+<span class="material-symbols-outlined">folder_zip</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200 truncate">projeto_alpha_v4.zip</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter mt-0.5">AES-256 • 1.15 GB • Criptografado há 3d</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-primary hover:text-primary/80 transition-opacity">
+<span class="material-symbols-outlined">lock_open</span>
+</button>
+</div>
+<div class="p-4 border-b border-slate-100 dark:border-slate-800/50 flex items-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+<div class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center text-slate-500 shrink-0">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-slate-700 dark:text-slate-200 truncate">contrato_assinado.pdf</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter mt-0.5">AES-256 • 2.1 MB • Criptografado há 5d</p>
+</div>
+<button class="opacity-0 group-hover:opacity-100 text-primary hover:text-primary/80 transition-opacity">
+<span class="material-symbols-outlined">lock_open</span>
+</button>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full text-center text-primary text-xs font-bold uppercase hover:underline">Limpar Histórico de Sessão</button>
+</div>
+</div>
+<div class="bg-primary p-6 rounded text-white shadow-lg shadow-primary/20 relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">gpp_maybe</span>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined">enhanced_encryption</span>
+<span class="font-bold text-sm tracking-wide">ZERO TRUST VAULT</span>
+</div>
+<p class="text-sm text-white/90 leading-relaxed mb-4 relative z-10">Suas chaves de criptografia nunca saem deste dispositivo. Nem a CLEARFORGE pode acessar seus dados.</p>
+<div class="text-[10px] bg-white/20 py-1 px-3 rounded inline-block font-bold">SHA-512 HASHING ATIVO</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>

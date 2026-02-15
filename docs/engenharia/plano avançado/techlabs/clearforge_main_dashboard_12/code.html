@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Audit Summary Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0078D4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "accent-blue": "#0063cc",
+                        "success": "#107C10",
+                    },
+                    fontFamily: {
+                        "display": ["Segoe UI", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "8px", "lg": "8px", "xl": "12px", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { font-family: 'Segoe UI', 'Inter', sans-serif; }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .card-shadow { box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white shadow-sm">
+<span class="material-icons text-xl">settings_input_component</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white uppercase">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+                    Painel
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">auto_fix_high</span>
+                    Limpeza Inteligente
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">hard_drive</span>
+                    Integridade do Disco
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-symbols-outlined text-lg">assignment_turned_in</span>
+                    Resumo de Auditoria
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">memory</span>
+                    Otimização de Memória
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">shield</span>
+                    Privacidade
+                </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+                    Configurações
+                </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Relatório Final</span>
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Resumo Geral de Auditoria</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-success/10 rounded text-xs font-medium text-success">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+                        Sistema Otimizado
+                    </div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqquS3BUJtr936NsI3sLuuIEvcs_40Is2mopVyFQgNEOoFDJ231Z33juE247xv3WOXsHa5ymJOD3p7_R2YitARJpyCakV5ZCsEPHvD2fjhx1Rp6r0D2RF7mEUR3CPd2BOFuJ9MOWFOVFv_zEjLRHzbcU9Rf4rQ9kk7inQ9q61sTBGF48VgYusN1JK6j3V30Ae1JAUJLEhoVJZoWb-1X_1BaDWTwbct_2YfFjzCxnMa00G5j74cUUu4RpP_xvyjV0dxdRn5Mya9kk"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Administrator</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-hidden flex">
+<div class="flex-1 overflow-y-auto p-8 scrollbar-hide bg-slate-50 dark:bg-slate-950">
+<div class="max-w-5xl mx-auto space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Score Geral de Otimização</p>
+<h3 class="text-3xl font-bold text-primary">98<span class="text-lg text-slate-400">/100</span></h3>
+</div>
+<div class="w-16 h-16 rounded-full border-4 border-primary border-t-transparent flex items-center justify-center">
+<span class="text-xs font-bold text-primary">Excelente</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow flex items-center justify-between">
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Total de Problemas Resolvidos</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-white">1.402</h3>
+</div>
+<div class="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center text-success">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-blue-500">security</span>
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider">Segurança</h4>
+</div>
+<ul class="space-y-3">
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Windows Firewall</span>
+<span class="text-[10px] font-bold px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full uppercase">Ativo</span>
+</li>
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Controle UAC</span>
+<span class="text-[10px] font-bold px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full uppercase">Otimizado</span>
+</li>
+<li class="flex items-center justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Active Shield Status</span>
+<span class="text-[10px] font-bold px-2 py-0.5 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 rounded-full uppercase">Protegido</span>
+</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-purple-500">auto_delete</span>
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider">Limpeza</h4>
+</div>
+<div class="flex flex-col items-center justify-center py-2">
+<span class="text-2xl font-bold text-slate-900 dark:text-white">12.4GB</span>
+<p class="text-[10px] font-bold text-slate-400 uppercase">Espaço Total Liberado</p>
+</div>
+<div class="mt-4 w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-purple-500 h-full w-[85%]"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-amber-500">speed</span>
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider">Desempenho</h4>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Redução CPU Idle</span>
+<span class="text-sm font-semibold">-14%</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Ganhos RAM</span>
+<span class="text-sm font-semibold">+2.1GB</span>
+</div>
+</div>
+<p class="text-[11px] text-slate-500 italic">Otimização de registros de inicialização concluída com sucesso.</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 card-shadow">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-red-500">visibility_off</span>
+<h4 class="font-bold text-slate-900 dark:text-white uppercase text-xs tracking-wider">Privacidade</h4>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Rastreadores</p>
+<p class="text-lg font-bold text-red-500">412</p>
+<p class="text-[10px] text-slate-500">Bloqueados</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-3 rounded">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Navegador</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Limpo</p>
+<p class="text-[10px] text-slate-500">Cache/Cookies</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 p-6 overflow-y-auto flex flex-col gap-6">
+<div>
+<h2 class="text-sm font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-wider flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-primary">fact_check</span>
+                            Recomendações Finais
+                        </h2>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<input checked="" class="mt-1 rounded border-slate-300 text-primary focus:ring-primary w-4 h-4" disabled="" type="checkbox"/>
+<div>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">Atualizar Drivers do Sistema</p>
+<p class="text-[10px] text-slate-500">2 drivers de rede pendentes de atualização para máxima estabilidade.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<input checked="" class="mt-1 rounded border-slate-300 text-primary focus:ring-primary w-4 h-4" disabled="" type="checkbox"/>
+<div>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">Backup de Ponto de Restauração</p>
+<p class="text-[10px] text-slate-500">Criar novo ponto de restauração após estas modificações estruturais.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<input checked="" class="mt-1 rounded border-slate-300 text-primary focus:ring-primary w-4 h-4" disabled="" type="checkbox"/>
+<div>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">Verificação de Agendamento</p>
+<p class="text-[10px] text-slate-500">A manutenção automática mensal foi configurada corretamente.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded border-slate-300 text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<div>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">Ativar Backup em Nuvem</p>
+<p class="text-[10px] text-slate-500">Recomendado para proteção adicional contra falhas de hardware.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-start gap-3 bg-primary/5 dark:bg-primary/10 p-3 rounded text-[11px] text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-base shrink-0 text-primary">info</span>
+<p>Este relatório contém dados técnicos detalhados sobre as modificações realizadas no sistema operacional para fins de auditoria.</p>
+</div>
+</div>
+</aside>
+</div>
+<footer class="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">history</span>
+<span class="font-medium">Auditoria finalizada em 22/05/2024 - 15:45:12</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-sm rounded transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">mail</span>
+                        Enviar por E-mail
+                    </button>
+<button class="px-10 py-2.5 bg-primary hover:bg-primary/90 text-white font-bold text-sm rounded shadow-lg shadow-primary/25 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+                        Exportar Relatório PDF
+                    </button>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

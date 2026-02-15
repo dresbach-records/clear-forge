@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - Deep Uninstaller</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter", "Segoe UI", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "8px", "lg": "8px", "xl": "12px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .table-row-hover:hover { background-color: rgba(19, 127, 236, 0.04); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">delete_sweep</span>
+                Desinstalação Profunda
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">build</span>
+                Ferramentas
+            </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<nav class="flex items-center gap-2 text-sm">
+<span class="text-slate-400">Ferramentas</span>
+<span class="material-icons text-xs text-slate-300">chevron_right</span>
+<span class="font-semibold text-slate-700 dark:text-slate-200">Desinstalação Profunda</span>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<input class="pl-9 pr-4 py-1.5 bg-slate-100 dark:bg-slate-800 border-none rounded text-sm w-64 focus:ring-2 focus:ring-primary/20" placeholder="Buscar aplicativos..." type="text"/>
+<span class="material-icons absolute left-2.5 top-1.5 text-slate-400 text-lg">search</span>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">help_outline</span>
+</button>
+</div>
+</header>
+<div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="px-4 py-1.5 rounded bg-slate-100 dark:bg-slate-800 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white transition-colors">Todos</button>
+<button class="px-4 py-1.5 rounded text-sm font-medium text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Grandes Apps</button>
+<button class="px-4 py-1.5 rounded text-sm font-medium text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Raramente Usados</button>
+<button class="px-4 py-1.5 rounded text-sm font-medium text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Recentes</button>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs text-slate-400">42 Aplicativos Instalados</span>
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-6 rounded shadow-sm transition-all text-sm">
+<span class="material-icons text-sm">auto_fix_high</span>
+                    Desinstalação Profunda
+                </button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto bg-white dark:bg-slate-950">
+<table class="w-full text-left border-collapse">
+<thead class="sticky top-0 bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 z-10">
+<tr>
+<th class="py-3 px-8 text-xs font-bold text-slate-500 uppercase tracking-wider w-12">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+</th>
+<th class="py-3 px-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Nome do App</th>
+<th class="py-3 px-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Editor</th>
+<th class="py-3 px-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Data de Instalação</th>
+<th class="py-3 px-4 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Tamanho</th>
+<th class="py-3 px-8 text-xs font-bold text-slate-500 uppercase tracking-wider text-right">Impacto no Sistema</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2MZ6u9_C28QDB5OYD6RejcO96HQ46yRRWLeUj1qBmxKSiG4OUxDH2-gm_8noIxBjXFInGVu79lDpJxNaMBiQoQJLBtYYGpAB2uVxN1_IjdJ7-qq493SBFyfA67TjpNeeVCFpoenRj55x8JqSmOyh14W3cSTWGCRVqQ9bQBpNmHmzQyYp8x_jVY8f2BvFRhShTyP0l1wT-wdmPnJrKNk0eFZw6q0joxw3CFrLukkqCOO0iTCbiTIYk2r9ZYq6F7R_d5fYlNcE4JCA"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">Design Master Pro Suite</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">CreativeLogic Corp</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">12 Mai 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">2.4 GB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-bold rounded">Alto</span>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXlu3Xowy1A4td9o_itWEPigNxgnD_TfKauQsHat2PDt_SQkPvCKO9BQxRQ0PldBM9v4YK59lEDKSE7d9gQs_KUtqeaek-Ks_MmOh-6aCDE3HkJf-SyShXQdupC-j1csro9Th96gYoTrRT_oqWMdGmXa8IxIt_GDygsjQOl5rZyBLKmP1AOToyt8qGCpfijeQZeIIdGNSAexcVA8imiXRiRFyzpT_iPYq7hPt_3ca0OxeXfT3cqkzom26V6aJ_LLJKarU7QWQFVNM"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">FastCut Video Editor</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">MediaFlow Systems</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">08 Ago 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">1.1 GB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold rounded">Médio</span>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0EdsJWCHPd3i2H_Cndf1PU4Yv79_O7Y1c3RNWJannDYdGNUl6L_sGVcrlcJiCtumOTeOEOcRsM4ZBLr-_Sk2BC9xSTe38Yt40_BfIRYa7S6IdtNmyglVwfkPNrn2kwM7QOrX_m78AMU8XkuLjx3ywu14zv72QREMidplrm0JAE9o1hj2jPw7sFm6605Tt9icxdgIkf-QDeA7LqSLKyA6JQI4O-Ajbsjonh_ZvLEgdu47hFRhfgKMTld7uObYuUhzY4ffkBNxV27A"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">CodeForge IDE</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">DevTools Inc</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">22 Set 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">842 MB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold rounded">Baixo</span>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxtQtkYJ8pUqDUnxY5Gg1WEJG9q1JUkNxKf7m2ew9t7eDC74aou6soQppy4vCyuicBNij2U26lU0D7Q6rqoNmiCDVgSRIGjY1APdGBQuyDsKgazvxr9L7q9S3nvyM9cnJ2Y9vRaxaXjziwi6PnClci9htLvVfsCDU-yynoxO7AvEFvrKynpeIHVojdvg6A7gAS25BKZLKF9R36EyVciyYQA9fgLGreUIiPDRtHPLyo4fL7hAf4Q7IgL8v6jA9EZpFSndx9gRHBHlI"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">QuickMessenger Desktop</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">ConnectApp Ltd</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">01 Out 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">156 MB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold rounded">Baixo</span>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcm2TayCQm1iYrWRcBt4vJB-sOOO36c50D650rN_lg-3-OJrNbCntlt1wK8Ryfz4QQR58PGCnADZkL5rT5AN6_wO35DwZibXzmulhlVIhQLmS7mdSpewf36i-ijgREES4nFA-cTIZ0MSVos7heBW79qv-ZQF9qKLsyyx1v8z9eIPQwgtsOFAGMYvWKBzaeYJZBSp-rKnleEgUPLVwx-PZXtt0EeWWcQ9MxYSTfIn6rn4_QsCdvqsPj5IWKZ8k5MJ58KMa_9yOQO3s"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">CloudSync Driver</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">SkyData Solutions</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">15 Jan 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">42 MB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold rounded">Médio</span>
+</td>
+</tr>
+<tr class="table-row-hover transition-colors">
+<td class="py-4 px-8"><input class="rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/></td>
+<td class="py-4 px-4 flex items-center gap-3">
+<img alt="App Icon" class="w-8 h-8 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyQDxuF0mJ3nutNh2Gj8Sf2Ck4jV_OxmRI0dCK5Lvrw1pwT06gu6ucXQ8mMq7ijLEX3UKCdi9UdQ_tOPglEu0lTqoaEkOuYoQwLNinCUWlwJTvyJBpP3msTj6-79aDs8NrTuLQJ5U3lQi0RyKkE2byGy9aqrgTSPFQY5vWbYaJzH4QqanJWsBu0H5tuBiEh-LQjhqBdA41UU7L1pL7Cx9Cg1q_oLHWccVXTEC6dN3g5QZlWE7CvWho0DqD0OVbD7GbgyP4t-HKiQM"/>
+<span class="font-medium text-slate-900 dark:text-white text-sm">SonicStreamer</span>
+</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">AudioPlex</td>
+<td class="py-4 px-4 text-sm text-slate-500 dark:text-slate-400">11 Nov 2023</td>
+<td class="py-4 px-4 text-sm text-slate-900 dark:text-white font-medium text-right">212 MB</td>
+<td class="py-4 px-8 text-right">
+<span class="px-2 py-1 bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 text-xs font-bold rounded">Baixo</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer class="h-12 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-between text-xs text-slate-500">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1"><span class="material-icons text-xs">info</span> A desinstalação profunda remove chaves de registro e arquivos residuais.</span>
+</div>
+<div class="flex items-center gap-6">
+<span>Total selecionado: 0 itens</span>
+<span>Espaço recuperável: 0 MB</span>
+</div>
+</footer>
+</main>
+<aside class="w-80 bg-white dark:bg-slate-900 border-l border-slate-200 dark:border-slate-800 flex flex-col p-6 gap-6">
+<div class="bg-primary/5 border border-primary/20 rounded-lg p-5">
+<h3 class="text-primary font-bold text-sm uppercase tracking-wider mb-3">Modo Avançado Ativo</h3>
+<p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                Você está no modo de análise profunda. O CLEARFORGE monitorará o processo de desinstalação padrão para interceptar e remover sobras de software.
+            </p>
+<div class="space-y-2">
+<label class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+<input checked="" class="rounded border-slate-300 text-primary" type="checkbox"/>
+                    Limpar Registro do Windows
+                </label>
+<label class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+<input checked="" class="rounded border-slate-300 text-primary" type="checkbox"/>
+                    Excluir Arquivos Temporários
+                </label>
+<label class="flex items-center gap-3 text-xs text-slate-700 dark:text-slate-300">
+<input checked="" class="rounded border-slate-300 text-primary" type="checkbox"/>
+                    Remover Pastas de AppData
+                </label>
+</div>
+</div>
+<div class="flex-1">
+<h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Estatísticas do Sistema</h4>
+<div class="space-y-4">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-xs font-medium">
+<span>Espaço Livre</span>
+<span class="text-primary">72 GB</span>
+</div>
+<div class="h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-xs font-medium">
+<span>Lixo Residual Detectado</span>
+<span class="text-amber-500">4.2 GB</span>
+</div>
+<div class="h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-amber-500" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-900 rounded p-5 text-white">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-icons text-primary">verified_user</span>
+<span class="text-xs font-bold">PONTO DE RESTAURAÇÃO</span>
+</div>
+<p class="text-[10px] text-slate-400 mb-3 uppercase font-semibold">Status: Protegido</p>
+<p class="text-xs text-slate-300 leading-tight">Um ponto de restauração será criado automaticamente antes de cada remoção profunda.</p>
+</div>
+</aside>
+</div>
+
+</body></html>

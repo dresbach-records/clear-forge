@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Ferramentas Avançadas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "premium-gold": "#fbbf24",
+                        "slate-panel": "#ffffff"
+                    },
+                    fontFamily: {
+                        "sans": ["Segoe UI", "Inter", "system-ui", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "8px",
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            -webkit-font-smoothing: antialiased;
+            background-color: #f6f7f8;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .card-shadow {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+<body class="text-slate-700 font-sans">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 border-r border-slate-200 bg-white flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl font-bold">bolt</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 uppercase">Clearforge</h1>
+</div>
+<nav class="flex-1 px-4 space-y-1 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/5 text-primary font-semibold border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined text-xl">build</span>
+<span class="text-sm">Ferramentas Avançadas</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">assessment</span>
+<span class="text-sm font-medium">Relatórios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl">security</span>
+<span class="text-sm font-medium">Proteção</span>
+</a>
+<div class="pt-6 pb-2 text-[10px] font-bold text-slate-400 uppercase px-3 tracking-widest">Configuração</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl text-slate-400">settings</span>
+<span class="text-sm font-medium">Preferências</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded hover:bg-slate-100 transition-colors text-slate-600" href="#">
+<span class="material-symbols-outlined text-xl text-slate-400">help_outline</span>
+<span class="text-sm font-medium">Suporte VIP</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100">
+<div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-icons text-sm">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Membro PRO</span>
+</div>
+<div class="text-[10px] text-slate-500 mb-2 font-medium">Acesso total a ferramentas avançadas.</div>
+<button class="w-full py-1.5 text-[10px] font-bold bg-white border border-slate-200 text-slate-700 rounded shadow-sm hover:bg-slate-50 uppercase">Conta</button>
+</div>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden bg-background-light">
+<header class="h-16 border-b border-slate-200 bg-white flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-bold text-slate-800">Ferramentas Avançadas</h2>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-[10px] font-bold text-emerald-600 tracking-tight uppercase">Status: PRO Ativo</span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3">
+<div class="text-right">
+<p class="text-[11px] font-bold text-slate-900 uppercase">TI Administrativo</p>
+<p class="text-[9px] text-slate-400 uppercase font-semibold">Workspace #01</p>
+</div>
+<div class="w-8 h-8 rounded bg-slate-100 flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-xl text-slate-500">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8">
+<div class="grid grid-cols-12 gap-6 max-w-7xl">
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-blue-50 text-primary rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">account_tree</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Otimizador de Registro Profundo</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Limpeza estrutural e correção de chaves corrompidas no Windows Registry para máxima estabilidade.</p>
+</div>
+<button class="w-full py-2.5 bg-primary text-white text-xs font-bold rounded uppercase tracking-wider hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">search</span>
+                            Analisar
+                        </button>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-amber-50 text-amber-600 rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">settings_input_component</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Gerenciador de Drivers</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Atualização automática de drivers obsoletos e backup preventivo de componentes críticos do hardware.</p>
+</div>
+<button class="w-full py-2.5 bg-slate-900 text-white text-xs font-bold rounded uppercase tracking-wider hover:bg-slate-800 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">system_update</span>
+                            Atualizar Tudo
+                        </button>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">restore_page</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Recuperação de Arquivos</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Recupere documentos, fotos e arquivos deletados acidentalmente de partições NTFS ou FAT32.</p>
+</div>
+<button class="w-full py-2.5 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded uppercase tracking-wider hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">folder_open</span>
+                            Abrir Ferramenta
+                        </button>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-red-50 text-red-600 rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">enhanced_encryption</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Destruidor de Dados Seguro</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Eliminação definitiva de dados com algoritmos de nível militar (DoD 5220.22-M) impossibilitando recuperação.</p>
+</div>
+<button class="w-full py-2.5 bg-white border border-slate-200 text-red-600 text-xs font-bold rounded uppercase tracking-wider hover:bg-red-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">delete_forever</span>
+                            Destruir Dados
+                        </button>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-purple-50 text-purple-600 rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Otimização de Rede/Internet</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Ajuste fino de parâmetros TCP/IP e DNS para reduzir latência e maximizar a largura de banda.</p>
+</div>
+<button class="w-full py-2.5 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded uppercase tracking-wider hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">speed</span>
+                            Otimizar Conexão
+                        </button>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 bg-white border border-slate-200 rounded p-6 card-shadow flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-3xl">donut_small</span>
+</div>
+<h3 class="text-sm font-bold text-slate-900 mb-2">Analisador de Espaço Visual</h3>
+<p class="text-xs text-slate-500 leading-relaxed mb-6">Mapeamento gráfico de arquivos grandes e pastas volumosas para facilitar a liberação de espaço em disco.</p>
+</div>
+<button class="w-full py-2.5 bg-white border border-slate-200 text-slate-700 text-xs font-bold rounded uppercase tracking-wider hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                            Visualizar Mapa
+                        </button>
+</div>
+</div>
+<div class="mt-12 p-6 bg-slate-100 rounded border border-slate-200 flex items-center gap-4 max-w-7xl">
+<span class="material-symbols-outlined text-slate-400">info</span>
+<p class="text-xs text-slate-500 italic">As ferramentas PRO utilizam acesso de nível administrativo para realizar modificações profundas no sistema. Recomenda-se criar um ponto de restauração antes de operações críticas.</p>
+</div>
+</div>
+<footer class="h-10 bg-white border-t border-slate-200 flex items-center justify-between px-8 text-[10px] text-slate-400 uppercase font-bold tracking-widest shrink-0">
+<div class="flex gap-4">
+<span>CLEARFORGE PRO v4.2.0</span>
+<span class="text-slate-200">|</span>
+<span class="text-primary">LICENÇA CORPORATIVA ATIVA</span>
+</div>
+<div class="flex gap-4">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> ENGINE 10.4.2</span>
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> SECURE SYNC</span>
+</div>
+</footer>
+</main>
+</div>
+
+</body></html>

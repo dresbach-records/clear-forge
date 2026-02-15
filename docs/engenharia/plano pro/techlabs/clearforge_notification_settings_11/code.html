@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - Visual Style Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0078D4",
+                        "success": "#107C10",
+                        "warning": "#D83B01",
+                        "danger": "#A4262C",
+                        "neutral-light": "#F3F3F3",
+                        "neutral-dark": "#201F1E",
+                        "gray-100": "#F3F3F3",
+                        "gray-200": "#EDEBE9",
+                        "gray-300": "#D2D0CE",
+                        "gray-400": "#A19F9D",
+                        "gray-500": "#605E5C",
+                        "gray-600": "#323130",
+                    },
+                    fontFamily: {
+                        "segoe": ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                    },
+                    boxShadow: {
+                        "soft": "0 2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.12)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-segoe bg-white text-neutral-dark;
+            }
+            h1 { @apply text-3xl font-bold mb-6; }
+            h2 { @apply text-xl font-bold mb-4 border-b border-gray-200 pb-2 mt-12; }
+            h3 { @apply text-base font-semibold mb-3; }
+        }
+        .grid-16 {
+            background-image: radial-gradient(circle, #E1E1E1 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-gray-200 bg-gray-100 p-6 hidden lg:block">
+<div class="flex items-center gap-2 mb-10">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-[14px]">bolt</span>
+</div>
+<span class="font-bold text-lg tracking-tight uppercase">ClearForge</span>
+</div>
+<nav class="space-y-1">
+<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Documentation</p>
+<a class="block py-2 text-sm text-gray-600 hover:text-primary" href="#typography">1. Typography</a>
+<a class="block py-2 text-sm text-gray-600 hover:text-primary" href="#colors">2. Color Palette</a>
+<a class="block py-2 text-sm text-gray-600 hover:text-primary" href="#ui-components">3. UI Components</a>
+<a class="block py-2 text-sm text-gray-600 hover:text-primary" href="#iconography">4. Iconography</a>
+<a class="block py-2 text-sm text-gray-600 hover:text-primary" href="#spacing">5. Shadows &amp; Spacing</a>
+</nav>
+</aside>
+<main class="lg:ml-64 p-8 md:p-12 max-w-5xl mx-auto">
+<header class="mb-12">
+<div class="inline-block px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded mb-2">V1.0 DESIGN SYSTEM</div>
+<h1 class="text-4xl font-extrabold text-neutral-dark">CLEARFORGE Visual Style Guide</h1>
+<p class="text-gray-500 max-w-2xl">Standard guidelines for the ClearForge desktop system optimization application. This guide ensures consistency across all development and design workflows.</p>
+</header>
+<section id="typography">
+<h2>1. Typography</h2>
+<div class="space-y-8 bg-gray-50 p-8 rounded-lg border border-gray-100">
+<div>
+<p class="text-xs text-gray-400 mb-2 font-mono">Segoe UI Bold / 24px</p>
+<p class="text-2xl font-bold">Header Level 1 - System Performance</p>
+</div>
+<div>
+<p class="text-xs text-gray-400 mb-2 font-mono">Segoe UI Semibold / 18px</p>
+<p class="text-lg font-semibold">Header Level 2 - Advanced Startup Manager</p>
+</div>
+<div>
+<p class="text-xs text-gray-400 mb-2 font-mono">Segoe UI Regular / 14px</p>
+<p class="text-sm leading-relaxed text-gray-600">Body text for descriptions and labels. ClearForge optimizes your Windows registry and startup processes to ensure maximum speed and stability. Segoe UI provides excellent readability in desktop environments.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white border border-gray-200 rounded">
+<p class="text-xs text-gray-400 mb-2 font-mono">Bold Style</p>
+<p class="font-bold">The quick brown fox</p>
+</div>
+<div class="p-4 bg-white border border-gray-200 rounded">
+<p class="text-xs text-gray-400 mb-2 font-mono">Italic Style</p>
+<p class="italic">The quick brown fox</p>
+</div>
+</div>
+</div>
+</section>
+<section id="colors">
+<h2>2. Color Palette</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-2">
+<div class="h-20 bg-primary rounded shadow-sm border border-black/5"></div>
+<div>
+<p class="text-sm font-bold">Primary Blue</p>
+<p class="text-xs text-gray-500">#0078D4</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-20 bg-success rounded shadow-sm border border-black/5"></div>
+<div>
+<p class="text-sm font-bold">Success Green</p>
+<p class="text-xs text-gray-500">#107C10</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-20 bg-warning rounded shadow-sm border border-black/5"></div>
+<div>
+<p class="text-sm font-bold">Warning Orange</p>
+<p class="text-xs text-gray-500">#D83B01</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-20 bg-danger rounded shadow-sm border border-black/5"></div>
+<div>
+<p class="text-sm font-bold">Danger Red</p>
+<p class="text-xs text-gray-500">#A4262C</p>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-5 h-12 rounded-lg overflow-hidden border border-gray-200">
+<div class="bg-[#F3F3F3] flex-1" title="#F3F3F3"></div>
+<div class="bg-[#EDEBE9] flex-1" title="#EDEBE9"></div>
+<div class="bg-[#D2D0CE] flex-1" title="#D2D0CE"></div>
+<div class="bg-[#605E5C] flex-1" title="#605E5C"></div>
+<div class="bg-[#201F1E] flex-1" title="#201F1E"></div>
+</div>
+<div class="mt-2 flex justify-between text-[10px] text-gray-400 font-mono uppercase">
+<span>Grays Neutral Light (#F3F3F3)</span>
+<span>Neutral Dark (#201F1E)</span>
+</div>
+</section>
+<section id="ui-components">
+<h2>3. UI Components</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400">Buttons (8px radius)</h3>
+<div class="flex flex-wrap gap-3 mt-4">
+<button class="px-5 py-2 bg-primary text-white text-sm font-semibold rounded hover:bg-blue-700 transition-colors">Primary Action</button>
+<button class="px-5 py-2 border border-gray-300 text-gray-700 text-sm font-semibold rounded hover:bg-gray-50 transition-colors">Secondary</button>
+<button class="px-3 py-2 text-danger text-sm font-semibold rounded hover:bg-danger/5">Destructive</button>
+</div>
+</div>
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400">Form Fields</h3>
+<div class="mt-4 space-y-4">
+<input class="w-full border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded text-sm px-3 py-2" placeholder="Application name..." type="text"/>
+<select class="w-full border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary rounded text-sm px-3 py-2">
+<option>Impact: Low</option>
+<option>Impact: Medium</option>
+<option>Impact: High</option>
+</select>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400">Toggles &amp; Checkboxes</h3>
+<div class="mt-4 space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative w-10 h-5 bg-gray-200 rounded-full group-hover:bg-gray-300 transition-colors">
+<div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full transition-transform translate-x-5 shadow-sm bg-primary"></div>
+</div>
+<span class="text-sm font-medium">Auto-optimize on startup</span>
+</label>
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" type="checkbox"/>
+<span class="text-sm">Delay initialization of high-impact services</span>
+</div>
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" type="checkbox"/>
+<span class="text-sm">Enable deep registry cleaning</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="iconography">
+<h2>4. Iconography Style</h2>
+<div class="bg-gray-100 p-8 rounded-lg flex flex-wrap gap-8 justify-between">
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">settings_suggest</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">optimization</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">rocket_launch</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">startup</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">security</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">security</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">history</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">history</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">memory</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">resources</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">speed</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">performance</p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-gray-600 text-3xl font-light">bolt</span>
+<p class="text-[10px] mt-2 font-mono text-gray-400">quick_action</p>
+</div>
+</div>
+<p class="mt-4 text-sm text-gray-500 italic">Technical Note: Icons should be used with "Light" weight (100-300) to maintain a professional, clean technical aesthetic.</p>
+</section>
+<section class="pb-24" id="spacing">
+<h2>5. Shadows &amp; Spacing</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400 mb-4">16px Grid System</h3>
+<div class="grid-16 w-full aspect-video border border-gray-200 rounded-lg relative overflow-hidden bg-white">
+<div class="absolute inset-4 bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="text-[10px] font-bold text-primary">Content Area (Padding 16px)</span>
+</div>
+</div>
+<p class="mt-3 text-xs text-gray-500">Elements align to a 16px base grid to ensure consistent visual rhythm.</p>
+</div>
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-400 mb-4">Soft Shadows</h3>
+<div class="space-y-6">
+<div class="p-6 bg-white shadow-soft rounded-lg border border-gray-100">
+<p class="text-sm font-semibold">Standard Card Shadow</p>
+<p class="text-xs text-gray-400 font-mono mt-1">box-shadow: 0 2px 8px rgba(0,0,0,0.08)</p>
+</div>
+<div class="p-6 bg-white shadow-lg shadow-primary/10 rounded-lg border border-primary/5">
+<p class="text-sm font-semibold">Active/PRO Element Glow</p>
+<p class="text-xs text-gray-400 font-mono mt-1">box-shadow: 0 10px 15px -3px rgba(0,120,212,0.1)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="lg:ml-64 border-t border-gray-200 p-8 text-center text-gray-400 text-xs">
+<p>© 2024 CLEARFORGE Technical Documentation - Internal Use Only</p>
+</footer>
+
+</body></html>

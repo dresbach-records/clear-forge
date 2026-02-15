@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Free Smart Cleaning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter", "Segoe UI", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "8px", "lg": "12px", "xl": "16px", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white uppercase">CLEARFORGE</h1>
+</div>
+<div class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                PLANO: GRATUITO
+            </div>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">build</span>
+                    Ferramentas
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">bar_chart</span>
+                    Relatórios
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Limpeza de Sistema</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors mr-2">
+<span class="material-icons text-xs">workspace_premium</span>
+                    UPGRADE PARA PRO
+                </button>
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">notifications</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD250OxWQWu2QfFKCSMtl1w9zS5cA6rr0kb-Sgw31_fTXKlJWll65r9U5l60KZalTzawl_CYNjoBtg39TxCSE9Yjd9vKt_Ee34mafhQvjNoHCWBq4R0D5cE915bermxhHgq0c3Ii6kTiT9hBrWWRy_EYNEVz492qadb7WbHUdTBJ_fKTXPF8Rjmq2RmMUUerd7tpo_Q4Uet_Xat-L5klbo07AYWj8kiZTy8al3cWVI7pEiuC_JUym59vohkFE5jXlQW2M8nFbjyac"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 bg-slate-50 dark:bg-slate-950/20">
+<div class="max-w-4xl mx-auto">
+<div class="bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="p-8 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Limpeza Inteligente</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400">Selecione os itens que deseja remover com segurança para liberar espaço em disco.</p>
+</div>
+<div class="p-8">
+<div class="space-y-4">
+<label class="flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary/20 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-medium text-slate-700 dark:text-slate-200">Arquivos Temporários</span>
+<span class="text-xs text-slate-400">Remova arquivos gerados por aplicativos e sistema</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-slate-500">2.4 GB</span>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary/20 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-medium text-slate-700 dark:text-slate-200">Lixeira</span>
+<span class="text-xs text-slate-400">Esvazie permanentemente os arquivos descartados</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-slate-500">512 MB</span>
+</label>
+<label class="flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="flex items-center gap-4">
+<input checked="" class="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary/20 cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-medium text-slate-700 dark:text-slate-200">Cache de Miniaturas</span>
+<span class="text-xs text-slate-400">Limpe o cache de visualização de ícones e pastas</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-slate-500">128 MB</span>
+</label>
+<div class="flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/20 opacity-70">
+<div class="flex items-center gap-4">
+<div class="w-5 h-5 flex items-center justify-center text-slate-300 dark:text-slate-600">
+<span class="material-icons text-sm">lock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-medium text-slate-500 dark:text-slate-400">Arquivos de Log Profundos</span>
+<span class="text-[9px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</div>
+<span class="text-xs text-slate-400">Análise exaustiva de registros do sistema</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-slate-300">--</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg border border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/20 opacity-70">
+<div class="flex items-center gap-4">
+<div class="w-5 h-5 flex items-center justify-center text-slate-300 dark:text-slate-600">
+<span class="material-icons text-sm">lock</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-medium text-slate-500 dark:text-slate-400">Resíduos do Windows Update</span>
+<span class="text-[9px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</div>
+<span class="text-xs text-slate-400">Remova backups antigos de atualizações de sistema</span>
+</div>
+</div>
+<span class="text-sm font-semibold text-slate-300">--</span>
+</div>
+</div>
+</div>
+<div class="p-8 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 uppercase font-bold tracking-wider">Total Selecionado</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">3.04 GB</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded transition-all shadow-lg shadow-primary/20 text-lg tracking-wide uppercase">
+                            INICIAR LIMPEZA
+                        </button>
+</div>
+</div>
+<div class="mt-8 bg-slate-900 dark:bg-slate-800 p-6 rounded flex items-center justify-between text-white shadow-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-bold text-lg mb-1 flex items-center gap-2">
+<span class="material-icons text-amber-500">workspace_premium</span>
+                            Desbloqueie a Limpeza Profunda
+                        </h3>
+<p class="text-slate-400 text-sm">Usuários PRO liberam em média 35% mais espaço em disco com a limpeza avançada.</p>
+</div>
+<button class="relative z-10 px-6 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded text-sm transition-colors uppercase tracking-wider">
+                        Ver Planos
+                    </button>
+<span class="material-icons absolute -right-4 -bottom-4 text-9xl opacity-5 pointer-events-none">auto_fix_high</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Main Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<!-- Left Sidebar -->
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">CLEARFORGE</h1>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                    Painel
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                    Limpeza Inteligente
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                    Desempenho
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                    Privacidade
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">build</span>
+                    Ferramentas
+                </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">bar_chart</span>
+                    Relatórios
+                </a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                    Configurações
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden">
+<!-- Top Bar -->
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Estado Geral</span>
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-slate-900 dark:text-white">Saúde do Sistema: 92 / 100</span>
+<div class="w-32 h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">notifications</span>
+</button>
+<div class="h-8 w-px bg-slate-200 dark:border-slate-800"></div>
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full border border-slate-200" data-alt="User avatar for clearforge system admin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD250OxWQWu2QfFKCSMtl1w9zS5cA6rr0kb-Sgw31_fTXKlJWll65r9U5l60KZalTzawl_CYNjoBtg39TxCSE9Yjd9vKt_Ee34mafhQvjNoHCWBq4R0D5cE915bermxhHgq0c3Ii6kTiT9hBrWWRy_EYNEVz492qadb7WbHUdTBJ_fKTXPF8Rjmq2RmMUUerd7tpo_Q4Uet_Xat-L5klbo07AYWj8kiZTy8al3cWVI7pEiuC_JUym59vohkFE5jXlQW2M8nFbjyac"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-8 flex gap-8">
+<!-- Central Grid Section -->
+<div class="flex-1 space-y-8">
+<!-- Main CTA -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-lg border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center shadow-sm">
+<div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-icons text-primary text-4xl">rocket_launch</span>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Pronto para otimizar?</h2>
+<p class="text-slate-500 dark:text-slate-400 mb-8 max-w-md">Uma análise completa irá identificar arquivos desnecessários, vulnerabilidades de privacidade e gargalos de desempenho.</p>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-12 rounded-lg transition-all shadow-lg shadow-primary/25 text-lg tracking-wide">
+                            EXECUTAR ANÁLISE
+                        </button>
+</div>
+<!-- 2-Column Grid -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Storage Use -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-slate-700 dark:text-slate-300">Uso de Armazenamento</h3>
+<span class="material-icons text-slate-400 text-xl">storage</span>
+</div>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-2">412 GB <span class="text-sm font-normal text-slate-400">/ 512 GB</span></div>
+<div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
+<div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">80% do espaço utilizado. 12 GB podem ser liberados.</p>
+</div>
+<!-- Startup Impact -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-slate-700 dark:text-slate-300">Impacto na Inicialização</h3>
+<span class="material-icons text-slate-400 text-xl">timer</span>
+</div>
+<div class="flex items-baseline gap-2 mb-2">
+<span class="text-3xl font-bold text-primary">Baixo</span>
+<span class="text-sm text-slate-400">14 apps ativos</span>
+</div>
+<div class="flex gap-1 h-1.5 mt-4">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-full"></div>
+<div class="flex-1 bg-slate-100 dark:bg-slate-800 rounded-full"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-3">Tempo de boot: 12.4s. Otimizado recentemente.</p>
+</div>
+<!-- Privacy Status -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-slate-700 dark:text-slate-300">Privacidade</h3>
+<span class="material-icons text-slate-400 text-xl">visibility_off</span>
+</div>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Protegido</div>
+<div class="flex items-center gap-2 text-emerald-500 text-sm font-medium">
+<span class="material-icons text-sm">check_circle</span>
+                                0 Riscos detectados
+                            </div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-4">Rastreadores de navegador bloqueados: 2.4k</p>
+</div>
+<!-- Memory Usage -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold text-slate-700 dark:text-slate-300">Uso de Memória RAM</h3>
+<span class="material-icons text-slate-400 text-xl">memory</span>
+</div>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-2">34% <span class="text-sm font-normal text-slate-400">em uso</span></div>
+<div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-2">
+<div class="h-full bg-primary rounded-full" style="width: 34%"></div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">5.4 GB / 16 GB. Estável.</p>
+</div>
+</div>
+</div>
+<!-- Right Activity Panel -->
+<aside class="w-80 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg flex flex-col h-full shadow-sm overflow-hidden">
+<div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<h3 class="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-wider">Atividade em Tempo Real</h3>
+<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+</div>
+<div class="flex-1 p-4 space-y-4 overflow-y-auto scrollbar-hide">
+<!-- Activity Item -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-sm">cleaning_services</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight">Cache do Sistema Limpo</p>
+<p class="text-xs text-slate-400 mt-1">Agora mesmo</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-sm">update</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight">Drivers atualizados</p>
+<p class="text-xs text-slate-400 mt-1">Há 14 minutos</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-sm">gpp_good</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight">Escaneamento de registro</p>
+<p class="text-xs text-slate-400 mt-1">Há 2 horas</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-3 opacity-60">
+<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-icons text-slate-400 text-sm">history</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight">Ponto de restauração criado</p>
+<p class="text-xs text-slate-400 mt-1">Ontem, às 18:30</p>
+</div>
+</div>
+<!-- Activity Item -->
+<div class="flex gap-3 opacity-60">
+<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-icons text-slate-400 text-sm">security</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 dark:text-slate-300 font-medium leading-tight">Proteção em tempo real ativa</p>
+<p class="text-xs text-slate-400 mt-1">Ontem, às 09:12</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full text-center text-primary text-xs font-bold uppercase hover:underline">Ver Histórico Completo</button>
+</div>
+</div>
+<!-- Mini Status Card -->
+<div class="bg-primary p-6 rounded-lg text-white shadow-lg shadow-primary/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-icons">workspace_premium</span>
+<span class="font-bold text-sm tracking-wide">VERSÃO PRO</span>
+</div>
+<p class="text-sm text-white/80 leading-relaxed mb-4">Você está utilizando todos os recursos de otimização profissional.</p>
+<div class="text-xs bg-white/20 py-1 px-3 rounded inline-block">Licença vitalícia</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</body></html>

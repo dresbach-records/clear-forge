@@ -1,0 +1,16 @@
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.AssemblyInfoInputs.cache
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.AssemblyInfo.cs
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.csproj.CoreCompileInputs.cache
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.sourcelink.json
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.csproj.AssemblyReference.cache
+/home/user/clear-forge/src/Clearforge.Domain/bin/Debug/net9.0/Clearforge.Domain.deps.json
+/home/user/clear-forge/src/Clearforge.Domain/bin/Debug/net9.0/Clearforge.Domain.dll
+/home/user/clear-forge/src/Clearforge.Domain/bin/Debug/net9.0/Clearforge.Domain.pdb
+/home/user/clear-forge/src/Clearforge.Domain/bin/Debug/net9.0/Clearforge.Core.dll
+/home/user/clear-forge/src/Clearforge.Domain/bin/Debug/net9.0/Clearforge.Core.pdb
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearfor.6E2D5984.Up2Date
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.dll
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/refint/Clearforge.Domain.dll
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/Clearforge.Domain.pdb
+/home/user/clear-forge/src/Clearforge.Domain/obj/Debug/net9.0/ref/Clearforge.Domain.dll

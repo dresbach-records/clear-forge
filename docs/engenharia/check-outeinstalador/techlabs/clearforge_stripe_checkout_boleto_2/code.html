@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f3f4f6",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "sans": ["'Segoe UI'", "Tahoma", "Geneva", "Verdana", "sans-serif"],
+                        "display": ["'Segoe UI'", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "8px",
+                        "xl": "8px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body { 
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        }
+    </style>
+<title>CLEARFORGE - Pedido Recebido</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="max-w-[560px] w-full bg-white dark:bg-slate-900 shadow-xl rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800">
+<div class="pt-8 flex justify-center">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-xl">bolt</span>
+</div>
+<span class="text-lg font-bold text-slate-800 dark:text-white tracking-tight">CLEARFORGE</span>
+</div>
+</div>
+<div class="p-8 md:p-12 text-center">
+<div class="mb-6 flex justify-center">
+<div class="w-20 h-20 bg-amber-50 dark:bg-amber-900/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-500 text-5xl font-light">schedule</span>
+</div>
+</div>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Pedido Recebido!</h1>
+<p class="text-slate-600 dark:text-slate-400 max-w-sm mx-auto">
+                Estamos aguardando a compensação do seu Boleto Bancário.
+            </p>
+<div class="mt-10 mb-8 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-6 border border-slate-100 dark:border-slate-800 text-left">
+<div class="grid grid-cols-1 gap-4">
+<div class="flex justify-between items-center border-b border-slate-200 dark:border-slate-700 pb-3">
+<span class="text-sm text-slate-500 dark:text-slate-400">Número do Pedido</span>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">#CF-83921</span>
+</div>
+<div class="flex justify-between items-center border-b border-slate-200 dark:border-slate-700 pb-3">
+<span class="text-sm text-slate-500 dark:text-slate-400">Plano</span>
+<span class="text-sm font-semibold text-slate-900 dark:text-white">CLEARFORGE PRO</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500 dark:text-slate-400">Valor Total</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">R$ 49,90</span>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-3 text-left bg-blue-50/50 dark:bg-primary/5 p-4 rounded-lg mb-8 border border-blue-100 dark:border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">info</span>
+<p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Assim que o pagamento for confirmado pelo banco (geralmente em até <span class="font-semibold text-slate-800 dark:text-slate-200">3 dias úteis</span>), sua licença será ativada automaticamente e você receberá um e-mail de confirmação.
+                </p>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-6 rounded-lg shadow-md shadow-primary/20 transition-all flex items-center justify-center space-x-2">
+<span>Ir para o Dashboard</span>
+</button>
+<a class="inline-block text-primary hover:underline text-sm font-semibold transition-all" href="#">
+                    Baixar Segunda Via do Boleto
+                </a>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/30 px-8 py-4 border-t border-slate-100 dark:border-slate-800 flex justify-center items-center">
+<div class="flex items-center space-x-1 opacity-60">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Powered by</span>
+<img alt="Stripe" class="h-3.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1VFlmtMuKYFo0OR207nAsksQ91ZSmDlw5ac-i6R-TwYJAQYqhYp15ADU_dBMPIaYwLB1EH3-v0UZeqeCi6z4bfIy18Wgb1nuOsJu91N3KP8PsvwEi_LNFm9RYs7Njc9xQyy8S_Ny-E73yVXhgXTajVLMatAzMCdkvRSa5BbNCGPKRB0pQ7mFZJOr6tdKrIbJlF90duAhV9KlMVIO-W70-jQJC42UzoGvht_8cLlYfJ61L5jR1oA8XZGJ33U4NCg_r9FTNgfjX-80"/>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 w-full text-center pointer-events-none opacity-20 hidden md:block">
+<div class="flex justify-center space-x-8 items-center grayscale">
+<img alt="Visa" class="h-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU1UKnnbC3c4zUUgASnvXa5kTGhMpGC4bSN5RasYKLC06MqasIGaRFyUdx_5ybX0UKIdguj-FBigV5yBlH0_mk86suVOGegwl2yZ92MNqizr2jKWDy8_6I8RGxTfe4W39rcSsPxwXXqBxZa1h0eZ7r__G80UTRBWZ2vIQk571Odfkh-cy56MVlYJoQJXnVGLIoyk4ieKJmJ8pEEcfoj_wvwGX-HeilFPnTqmsnrnrGXUfl3UO0ATrMFz_KaUackbAK7xHumyqqLZ4"/>
+<img alt="Mastercard" class="h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDolTxd_YWhoN39uVh7UpkJSYwL7sVwQDMwmYhgL0YiFgWeo4fI2ZS-mdOzwImSUNoRjD4Kevhz4eUCpOs8hZ1d2jNZZ4Q_4BbUYaxCMoDr2bezESyQsS46SB0uoEhFFZS9P60SMRp439sI75irlrod2QC-EkVsDMFrLBfnyfQ4A6WKFgEOzacpSOCComcmZgar2XhbjPCF44UfWqXcXVHEELaf0eRxdmJRIFxVXxR89oDpxJshhkbYYQFEKMEGh3v7Evt8s3XkoW4"/>
+<img alt="PCI" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiTMiNDefZDG120RWMD-1ZTOxOuB-elsjdFxj-B39RuPuEGofpM4qb0qFE9vzHKjHYHoCkXsKSiRDr_Ni_G6xTUZWaKqkRIJKwiiWexc3UlzBxQgpw6lFLWAYwbmu89-J6urD73yDkLchZO3wpYfSbFO4fx0b0w5r6Pjp6jEMgX91nNflW6Lf1nRXJ1DJysrBCKKuDILuXgOksH4Rs1KIho6jEenXRhuktzzeriDWAhDure7oKiwrGzJjWR6Zj2LOBZqtu-_mELs4"/>
+</div>
+</div>
+
+</body></html>

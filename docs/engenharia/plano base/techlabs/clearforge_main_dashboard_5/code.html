@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Free Basic Reports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white uppercase">CLEARFORGE</h1>
+</div>
+<div class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                PLANO: GRATUITO
+            </div>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">build</span>
+                    Ferramentas
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">bar_chart</span>
+                    Relatórios
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider italic">Relatórios Básicos</span>
+<div class="h-4 w-px bg-slate-200 dark:bg-slate-800"></div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">Versão Gratuita</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors mr-2">
+<span class="material-icons text-xs">workspace_premium</span>
+                    UPGRADE PARA PRO
+                </button>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASaS8zDVTOfTqKfoHzVTK6bi7IP4d68IImUgxF3CiQEhTYYDy96hTFkxTysLbUkub9BManiuG1pbzPjUJkYfc3xEyOiKLtLbNeFZnvl8HOEMle0Ug6_v10m5r5kt4QhRnMDUnVk04oBRi1v0JoaQCUspCcpKFTET796BgC5KfYDaD-pwXHhXm2lbJAMf8CgyUBuJU6znSALrEzkF5C7pwaOv-5HZKsVoE7aGQfEw76nkyd6sKHa9Mm7YqZVeZH1Tp1l9wfVisVE1U"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8 max-w-5xl mx-auto w-full">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Relatórios de Limpeza</h2>
+<p class="text-slate-500 dark:text-slate-400">Visualizando as últimas 3 ações de otimização (Limite da Versão Gratuita).</p>
+</div>
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-sm overflow-hidden mb-8">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Data e Hora</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Ação Realizada</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Espaço Liberado</th>
+<th class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">24/05/2024 - 14:20</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-sm">cleaning_services</span>
+<span class="text-sm text-slate-700 dark:text-slate-300">Limpeza de Arquivos Temporários</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-emerald-500">1.2 GB</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">CONCLUÍDO</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">22/05/2024 - 09:15</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-sm">browser_updated</span>
+<span class="text-sm text-slate-700 dark:text-slate-300">Otimização de Navegador</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-emerald-500">450 MB</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">CONCLUÍDO</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-4">
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">20/05/2024 - 18:45</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-sm">storage</span>
+<span class="text-sm text-slate-700 dark:text-slate-300">Limpeza de Cache do Sistema</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<span class="text-sm font-bold text-emerald-500">820 MB</span>
+</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">CONCLUÍDO</span>
+</td>
+</tr>
+<tr class="opacity-40 bg-slate-50/50 dark:bg-slate-800/10 cursor-not-allowed">
+<td class="px-6 py-4"><span class="text-sm">--/--/---- --:--</span></td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-2">
+<span class="material-icons text-slate-400 text-sm">lock</span>
+<span class="text-sm">Registro Bloqueado</span>
+</div>
+</td>
+<td class="px-6 py-4"><span class="text-sm text-slate-400">Upgrade Necessário</span></td>
+<td class="px-6 py-4">
+<span class="material-symbols-outlined text-sm text-amber-500">workspace_premium</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-gradient-to-r from-slate-900 to-primary p-8 rounded-xl text-white shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-icons text-9xl">bar_chart</span>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="max-w-xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-icons text-amber-400">workspace_premium</span>
+<span class="text-xs font-bold tracking-widest uppercase text-amber-400">Recurso Premium</span>
+</div>
+<h3 class="text-2xl font-bold mb-2">Desbloqueie relatórios avançados e histórico vitalício com CLEARFORGE PRO</h3>
+<p class="text-slate-300 text-sm">Acompanhe cada byte limpo desde o primeiro dia, gere relatórios em PDF e visualize gráficos de tendência de desempenho do seu hardware.</p>
+</div>
+<button class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded flex items-center justify-center gap-3 transition-all shrink-0 shadow-lg shadow-black/20">
+<span class="text-sm">SAIBA MAIS</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

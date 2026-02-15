@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE Free Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+              },
+              fontFamily: {
+                "display": ["Inter", "Segoe UI", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .setting-card { @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden mb-4; }
+        .setting-header { @apply px-6 py-4 flex items-center justify-between cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors; }
+        .setting-content { @apply px-6 py-5 border-t border-slate-100 dark:border-slate-800/50 space-y-4; }
+        .pro-locked { @apply opacity-60 grayscale-[0.5] pointer-events-none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col shrink-0">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-icons text-xl">security</span>
+</div>
+<h1 class="font-bold text-xl tracking-tight text-slate-900 dark:text-white uppercase">CLEARFORGE</h1>
+</div>
+<div class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                PLANO: GRATUITO
+            </div>
+</div>
+<nav class="flex-1 px-4 py-2 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">dashboard</span>
+                Painel
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">auto_fix_high</span>
+                Limpeza Inteligente
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">speed</span>
+                Desempenho
+            </a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-icons text-lg">shield</span>
+                Privacidade
+            </a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">build</span>
+                    Ferramentas
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-icons text-lg">bar_chart</span>
+                    Relatórios
+                </div>
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium" href="#">
+<span class="material-icons text-lg">settings</span>
+                Configurações
+            </a>
+</div>
+</aside>
+<main class="flex-1 flex flex-col overflow-hidden">
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8 shrink-0">
+<div class="flex items-center gap-4">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Configurações do Sistema</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-amber-500 hover:bg-amber-600 text-white text-[10px] font-bold px-3 py-1.5 rounded flex items-center gap-2 transition-colors mr-2">
+<span class="material-icons text-xs">workspace_premium</span>
+                    UPGRADE PARA PRO
+                </button>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+<div class="flex items-center gap-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border border-slate-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_TXwFA80kSER0QFqjTPEgiKupaQ8BhHH_3HoxRyOa2s6N7ddyzJdQirhfnSfmhQ71cJjcsjRhM0nsWCiXSazub5rpypj4ddOnOJzxXD41CP37sNHgf63Mk514nCID_0NCR7YCt2poBpiBBJMhIQVZUI-XFnXj9uXKA9FASnsjt8nRBGTfzr4AhK1yRrV6xpII26ESlJv4-AK-_t-C_sDKFGSu-m8yjtQSOd8y-R-8okzaZKLzqXcxL3QOklSVxArZW-0qiaYzBHQ"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Admin</span>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-4xl mx-auto pb-12">
+<div class="setting-card">
+<div class="setting-header">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white font-bold">
+<span class="material-icons text-primary">settings</span>
+                            Geral
+                        </div>
+<span class="material-icons text-slate-400">expand_less</span>
+</div>
+<div class="setting-content">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Iniciar com o Windows</h4>
+<p class="text-xs text-slate-500">Abrir CLEARFORGE automaticamente ao ligar o computador.</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Minimizar para a bandeja</h4>
+<p class="text-xs text-slate-500">Manter o aplicativo em execução em segundo plano ao fechar a janela.</p>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="setting-card">
+<div class="setting-header">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white font-bold">
+<span class="material-icons text-primary">language</span>
+                            Idioma
+                        </div>
+<span class="material-icons text-slate-400">expand_less</span>
+</div>
+<div class="setting-content">
+<div>
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">Selecionar Idioma</label>
+<select class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm p-2.5 focus:ring-primary focus:border-primary">
+<option selected="">Português (Brasil)</option>
+<option>English (US)</option>
+<option>Español</option>
+<option>Français</option>
+</select>
+</div>
+</div>
+</div>
+<div class="setting-card">
+<div class="setting-header">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white font-bold">
+<span class="material-icons text-slate-400">auto_mode</span>
+                            Limpeza Automática
+                        </div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+<span class="material-icons text-slate-400">expand_more</span>
+</div>
+</div>
+<div class="setting-content pro-locked">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300">Ativar limpeza em tempo real</h4>
+<p class="text-xs text-slate-500">O sistema limpa arquivos temporários assim que são criados.</p>
+</div>
+<div class="relative inline-flex items-center opacity-50">
+<div class="w-11 h-6 bg-slate-200 rounded-full dark:bg-slate-700 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="setting-card">
+<div class="setting-header">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white font-bold">
+<span class="material-icons text-slate-400">calendar_month</span>
+                            Agendamento
+                        </div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-bold bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-900/50">PRO</span>
+<span class="material-icons text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-xs text-slate-400 dark:text-slate-500 font-medium">Versão: 2.0.1 (Free)</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE - Configurações de Notificação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex">
+<!-- Left Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-lg">bolt</span>
+</div>
+<span class="font-bold text-xl tracking-tight uppercase">ClearForge</span>
+</div>
+<nav class="flex-1 p-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">speed</span>
+<span class="text-sm font-medium">Otimização</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">security</span>
+<span class="text-sm font-medium">Segurança</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">notifications</span>
+<span class="text-sm font-medium">Notificações</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-500 hover:bg-primary/10 hover:text-primary transition-colors" href="#">
+<span class="material-icons text-[20px]">settings</span>
+<span class="text-sm font-medium">Geral</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800">
+<div class="bg-primary/10 rounded-lg p-3">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-primary uppercase tracking-wider">Assinatura PRO</span>
+<span class="material-icons text-primary text-sm">verified</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-400">Desbloqueie todos os recursos de otimização.</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-screen overflow-hidden">
+<!-- Top Header -->
+<header class="h-16 flex items-center px-8 border-b border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm">
+<h1 class="text-xl font-semibold text-slate-800 dark:text-white">Configurações de Notificação</h1>
+</header>
+<!-- Content Scrollable Container -->
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-3xl mx-auto space-y-8">
+<!-- Alertas de Saúde do Sistema -->
+<section>
+<div class="mb-4">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Alertas de Saúde do Sistema</h2>
+<p class="text-xs text-slate-500 mt-1">Mantenha-se informado sobre a integridade operacional do seu Windows.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="flex gap-4 items-start">
+<span class="material-icons text-primary mt-0.5">health_and_safety</span>
+<div>
+<p class="font-medium text-slate-800 dark:text-slate-200">Pontuação de Saúde Baixa</p>
+<p class="text-sm text-slate-500">Notificar quando a pontuação de saúde cair abaixo de 70%.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Lembretes de Limpeza -->
+<section>
+<div class="mb-4">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Lembretes de Limpeza</h2>
+<p class="text-xs text-slate-500 mt-1">Gerencie alertas de arquivos temporários e lixo eletrônico.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800 p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex gap-4 items-start">
+<span class="material-icons text-primary mt-0.5">delete_sweep</span>
+<div>
+<p class="font-medium text-slate-800 dark:text-slate-200">Notificar Acúmulo de Lixo</p>
+<p class="text-sm text-slate-500">Avisar quando o volume de arquivos desnecessários for alto.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="pt-4 border-t border-slate-50 dark:border-slate-800">
+<div class="flex justify-between items-center mb-3">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300">Limite de Notificações</label>
+<span class="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">500 MB</span>
+</div>
+<input class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-primary" max="2000" min="100" step="50" type="range" value="500"/>
+<div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+<span>100 MB</span>
+<span>2000 MB</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Atualizações de Drivers -->
+<section>
+<div class="mb-4">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Atualizações de Drivers</h2>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="flex gap-4 items-center">
+<span class="material-icons text-primary">system_update</span>
+<span class="font-medium text-slate-800 dark:text-slate-200 text-sm">Novas Atualizações Disponíveis</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Segurança e Privacidade -->
+<section>
+<div class="mb-4">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Segurança e Privacidade</h2>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="flex gap-4 items-center">
+<span class="material-icons text-primary">admin_panel_settings</span>
+<span class="font-medium text-slate-800 dark:text-slate-200 text-sm">Tentativas de Acesso Não Autorizado</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Modo Foco (PRO Exclusive) -->
+<section class="relative">
+<div class="absolute -top-1 -right-1 z-10">
+<span class="bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded shadow-lg shadow-primary/30 tracking-tighter uppercase">PRO</span>
+</div>
+<div class="p-6 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20">
+<div class="mb-4 flex items-center justify-between">
+<div>
+<h2 class="text-base font-bold text-slate-800 dark:text-white flex items-center gap-2">
+<span class="material-icons text-primary">visibility_off</span>
+                  Modo Foco
+                </h2>
+<p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Silencie todas as notificações enquanto joga ou usa apps em tela cheia.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-300 dark:bg-slate-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-3 bg-white/50 dark:bg-slate-900/50 rounded-lg border border-primary/10 flex items-center gap-3">
+<span class="material-icons text-primary/70 text-sm">sports_esports</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Ativar ao iniciar jogos</span>
+</div>
+<div class="p-3 bg-white/50 dark:bg-slate-900/50 rounded-lg border border-primary/10 flex items-center gap-3">
+<span class="material-icons text-primary/70 text-sm">fullscreen</span>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-400">Ativar em tela cheia</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Sticky Footer Actions -->
+<footer class="h-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 flex items-center justify-end gap-4 shadow-2xl">
+<button class="px-5 py-2 text-sm font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white transition-all rounded-lg">
+        Restaurar Padrões
+      </button>
+<button class="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white text-sm font-semibold rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center gap-2">
+<span class="material-icons text-sm">save</span>
+        Salvar Alterações
+      </button>
+</footer>
+</main>
+<!-- Illustration / Decor (Optional, subtle bottom decorative element) -->
+<div class="fixed bottom-24 right-8 pointer-events-none opacity-5 dark:opacity-10 scale-150 transform -rotate-12 translate-x-1/4">
+<img alt="Abstract system optimization icon gear" class="w-64 h-64 grayscale" data-alt="Abstract gears and optimization icons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXmSWzbbEjrlJczFkYb-GYgpwE56C866QyyzvUSnG61VRaDEsVZz3ATF4po57_bUNbaPZ0oOGEIR4Yhfw2fpiSX80vmpfX3zB9hpEGClT8zuL4ATvnnLLqucLavrjDBl0Dry9mG-SFkJd-cEbfKgRq8BCYZxcmBxe2sFY2hWedlf7nbZG6scGClwVybsTgxhxjg0xR9CT8IlefsyP_nL43Zdk7X22I8w1qmYU8lgTqEWeMEbux1fLQu8IABcXRjWGVHW8VgWaEYZg"/>
+</div>
+</body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLEARFORGE PRO - Backup do Registro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0078D4",
+                        "success": "#107C10",
+                        "warning": "#D83B01",
+                        "danger": "#A4262C",
+                        "neutral-light": "#F3F3F3",
+                        "neutral-dark": "#201F1E",
+                        "gray-100": "#F3F3F3",
+                        "gray-200": "#EDEBE9",
+                        "gray-300": "#D2D0CE",
+                        "gray-400": "#A19F9D",
+                        "gray-500": "#605E5C",
+                        "gray-600": "#323130",
+                    },
+                    fontFamily: {
+                        "segoe": ["Segoe UI", "Tahoma", "Geneva", "Verdana", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                    },
+                    boxShadow: {
+                        "soft": "0 2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.12)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-segoe bg-white text-neutral-dark;
+            }
+            h1 { @apply text-2xl font-bold mb-6; }
+            h2 { @apply text-sm font-bold mb-4 uppercase tracking-wider text-gray-500 border-b border-gray-100 pb-2; }
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex bg-white">
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-gray-200 bg-gray-100 p-6 hidden lg:block z-20">
+<div class="flex items-center gap-2 mb-10">
+<div class="w-6 h-6 bg-primary rounded flex items-center justify-center">
+<span class="material-icons text-white text-[14px]">bolt</span>
+</div>
+<span class="font-bold text-lg tracking-tight uppercase">ClearForge <span class="text-[10px] bg-primary/10 text-primary px-1 rounded ml-1">PRO</span></span>
+</div>
+<nav class="space-y-1">
+<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Sistema</p>
+<a class="flex items-center gap-3 py-2 px-3 text-sm text-gray-600 hover:bg-gray-200 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-gray-500">speed</span> Otimização
+        </a>
+<a class="flex items-center gap-3 py-2 px-3 text-sm bg-white text-primary font-semibold shadow-sm border border-gray-200 rounded" href="#">
+<span class="material-symbols-outlined text-lg">settings_backup_restore</span> Backup do Registro
+        </a>
+<a class="flex items-center gap-3 py-2 px-3 text-sm text-gray-600 hover:bg-gray-200 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-gray-500">cleaning_services</span> Limpeza Profunda
+        </a>
+<div class="pt-4 mt-4 border-t border-gray-200">
+<p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">Configurações</p>
+<a class="flex items-center gap-3 py-2 px-3 text-sm text-gray-600 hover:bg-gray-200 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-gray-500">settings</span> Geral
+            </a>
+<a class="flex items-center gap-3 py-2 px-3 text-sm text-gray-600 hover:bg-gray-200 rounded transition-colors" href="#">
+<span class="material-symbols-outlined text-lg text-gray-500">language</span> Idioma e Região
+            </a>
+</div>
+</nav>
+</aside>
+<main class="lg:ml-64 flex-1 p-8 md:p-12 max-w-5xl mx-auto">
+<header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-extrabold text-neutral-dark mb-1">Backup do Registro</h1>
+<p class="text-gray-500">Gerencie pontos de restauração e proteja a integridade do sistema.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded text-sm font-semibold shadow-lg shadow-primary/20 hover:bg-[#005A9E] transition-all">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+            Criar Novo Ponto de Restauração
+        </button>
+</header>
+<div class="space-y-6">
+<div class="bg-white border border-gray-200 rounded-lg shadow-soft overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-gray-50 border-b border-gray-200">
+<th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Data e Hora</th>
+<th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Nome/Descrição</th>
+<th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Tamanho</th>
+<th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider">Status</th>
+<th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase tracking-wider text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-4 text-sm text-gray-600 whitespace-nowrap">24/05/2024 - 14:30:12</td>
+<td class="px-6 py-4 text-sm font-medium text-neutral-dark">Backup Pré-Otimização Semanal</td>
+<td class="px-6 py-4 text-sm text-gray-500">12.4 MB</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-green-50 text-success border border-green-100">
+<span class="material-symbols-outlined text-[14px] fill-1">check_circle</span> Íntegro
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-3">
+<button class="text-xs font-bold text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">restore</span> Restaurar
+                                    </button>
+<button class="text-gray-400 hover:text-danger transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-4 text-sm text-gray-600 whitespace-nowrap">20/05/2024 - 09:15:45</td>
+<td class="px-6 py-4 text-sm font-medium text-neutral-dark">Manual - Antes de Instalar Driver GPU</td>
+<td class="px-6 py-4 text-sm text-gray-500">11.8 MB</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-green-50 text-success border border-green-100">
+<span class="material-symbols-outlined text-[14px] fill-1">check_circle</span> Íntegro
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-3">
+<button class="text-xs font-bold text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">restore</span> Restaurar
+                                    </button>
+<button class="text-gray-400 hover:text-danger transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50/50 transition-colors">
+<td class="px-6 py-4 text-sm text-gray-600 whitespace-nowrap">15/05/2024 - 18:22:10</td>
+<td class="px-6 py-4 text-sm font-medium text-neutral-dark">Automático - Limpeza de Registro</td>
+<td class="px-6 py-4 text-sm text-gray-500">12.1 MB</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-full text-xs font-medium bg-green-50 text-success border border-green-100">
+<span class="material-symbols-outlined text-[14px] fill-1">check_circle</span> Íntegro
+                                </span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-3">
+<button class="text-xs font-bold text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">restore</span> Restaurar
+                                    </button>
+<button class="text-gray-400 hover:text-danger transition-colors">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-gray-50 px-6 py-3 border-t border-gray-200">
+<p class="text-[11px] text-gray-500 italic">Total de 3 backups armazenados. Ocupação total em disco: 36.3 MB.</p>
+</div>
+</div>
+<section class="bg-white p-6 border border-gray-200 rounded-lg shadow-soft">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_mode</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="text-sm font-bold text-neutral-dark">Configuração de Segurança Automática</h3>
+<p class="text-xs text-gray-500">Criar backup automático antes de cada otimização</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+</div>
+<footer class="mt-20 text-center text-gray-400 text-[10px] uppercase tracking-widest pb-8">
+<p>© 2024 CLEARFORGE System Optimization - Registry Backup Management PRO</p>
+</footer>
+</main>
+
+</body></html>
