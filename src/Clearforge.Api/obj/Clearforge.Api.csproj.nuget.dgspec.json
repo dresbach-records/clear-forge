@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/user/clear-forge/myapp.csproj": {}
+    "/home/user/clear-forge/src/Clearforge.Api/Clearforge.Api.csproj": {}
   },
   "projects": {
-    "/home/user/clear-forge/myapp.csproj": {
+    "/home/user/clear-forge/src/Clearforge.Api/Clearforge.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/clear-forge/myapp.csproj",
-        "projectName": "myapp",
-        "projectPath": "/home/user/clear-forge/myapp.csproj",
+        "projectUniqueName": "/home/user/clear-forge/src/Clearforge.Api/Clearforge.Api.csproj",
+        "projectName": "Clearforge.Api",
+        "projectPath": "/home/user/clear-forge/src/Clearforge.Api/Clearforge.Api.csproj",
         "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/clear-forge/obj/",
+        "outputPath": "/home/user/clear-forge/src/Clearforge.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/user/.nuget/NuGet/NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

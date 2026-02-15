@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/user/clear-forge/myapp.csproj": {}
+    "/home/user/clear-forge/src/Clearforge.Infrastructure/Clearforge.Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/user/clear-forge/myapp.csproj": {
+    "/home/user/clear-forge/src/Clearforge.Infrastructure/Clearforge.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/clear-forge/myapp.csproj",
-        "projectName": "myapp",
-        "projectPath": "/home/user/clear-forge/myapp.csproj",
+        "projectUniqueName": "/home/user/clear-forge/src/Clearforge.Infrastructure/Clearforge.Infrastructure.csproj",
+        "projectName": "Clearforge.Infrastructure",
+        "projectPath": "/home/user/clear-forge/src/Clearforge.Infrastructure/Clearforge.Infrastructure.csproj",
         "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/clear-forge/obj/",
+        "outputPath": "/home/user/clear-forge/src/Clearforge.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/user/.nuget/NuGet/NuGet.Config"
@@ -55,9 +55,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
