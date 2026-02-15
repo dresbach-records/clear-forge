@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Clearforge.Core.Domain;
 using Clearforge.Domain.Entities;
@@ -12,6 +13,8 @@ namespace Clearforge.Domain.Entities
         public string? PasswordHash { get; set; }
         public string? PasswordSalt { get; set; }
         public string? Role { get; set; } // e.g., "Admin", "User"
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
         public ICollection<License> Licenses { get; set; } = new List<License>();
         public ICollection<Device> Devices { get; set; } = new List<Device>();

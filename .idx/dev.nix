@@ -15,7 +15,7 @@
       enable = true;
       previews = {
         web = {
-          command = [ "dotnet" "watch" "--urls=http://localhost:$PORT" ];
+          command = [ "dotnet" "watch" "--project" "src/Clearforge.Api/Clearforge.Api.csproj" "--urls=http://localhost:$PORT" ];
           manager = "web";
         };
       };

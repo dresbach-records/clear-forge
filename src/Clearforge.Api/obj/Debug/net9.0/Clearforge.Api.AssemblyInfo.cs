@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Clearforge.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90b451d2ed3b9dd1d8c25c901c6f7709f1da361f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15a597d90bed818c91ae908f546e4003298a08d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Clearforge.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Clearforge.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

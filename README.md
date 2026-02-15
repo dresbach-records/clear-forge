@@ -27,7 +27,7 @@ The Dresbach Group operates in software engineering, infrastructure systems, ent
 
 ## Architecture
 
-Clearforge follows a modular enterprise architecture built on .NET 8 LTS.
+Clearforge follows a modular enterprise architecture built on .NET 9.
 
 ### Core Components
 
@@ -78,10 +78,10 @@ Clearforge follows a modular enterprise architecture built on .NET 8 LTS.
 
 **Backend:**
 
-*   .NET 8
+*   .NET 9
 *   ASP.NET Core Web API
 *   Entity Framework Core
-*   SQL Server / PostgreSQL
+*   PostgreSQL
 
 **Desktop:**
 
@@ -101,12 +101,13 @@ Clearforge follows a modular enterprise architecture built on .NET 8 LTS.
 
 ```
 Clearforge.sln
- ├── Clearforge.App
- ├── Clearforge.Core
- ├── Clearforge.Api
- ├── Clearforge.Domain
- ├── Clearforge.Infrastructure
- └── Clearforge.Web
+└── src
+    ├── Clearforge.Api
+    ├── Clearforge.Application
+    ├── Clearforge.Core
+    ├── Clearforge.Domain
+    ├── Clearforge.Infrastructure
+    └── Clearforge.Licensing
 ```
 
 ## Licensing
@@ -125,7 +126,7 @@ License validation and activation are handled through secure API endpoints.
 ## Development Status
 
 **Current Phase:**
-Product Structuring & Engineering Integration
+Product Structuring & Engineering Integration. The project has been successfully refactored from a placeholder name to its official Clearforge branding.
 
 **Next Milestones:**
 
