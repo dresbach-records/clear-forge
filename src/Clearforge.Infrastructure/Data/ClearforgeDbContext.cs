@@ -9,12 +9,12 @@ namespace Clearforge.Infrastructure.Data
         {
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<License> Licenses { get; set; }
-        public DbSet<Device> Devices { get; set; }
-        public DbSet<Subscription> Subscriptions { get; set; }
-        public DbSet<AuditLog> AuditLogs { get; set; }
-        public DbSet<Report> Reports { get; set; }
+        public DbSet<User> Users { get; set; } = null!;
+        public DbSet<License> Licenses { get; set; } = null!;
+        public DbSet<Device> Devices { get; set; } = null!;
+        public DbSet<Subscription> Subscriptions { get; set; } = null!;
+        public DbSet<AuditLog> AuditLogs { get; set; } = null!;
+        public DbSet<Report> Reports { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
